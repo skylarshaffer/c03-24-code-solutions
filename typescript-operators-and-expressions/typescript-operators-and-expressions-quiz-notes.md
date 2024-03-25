@@ -8,6 +8,8 @@ Answer the following questions in the provided markdown file before turning in t
   A number is always returned by an arithmetic operation.
 - What is string concatenation?
   String concatenation is the combination of at least one string and other data that results in a single new string.
+  CORRECTION:
+  String concatenation is the combination of two string values into one new string value.
 - What purpose(s) does the `+` plus operator serve in JavaScript?
   The '+' operator may either:
   Add numbers if a number data type is on each side of the operator
