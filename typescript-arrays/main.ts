@@ -17,7 +17,7 @@ console.log(
 console.log('colors:', colors);
 console.log('typeof colors:', typeof colors);
 
-//  students
+// students
 const students: string[] = ['Johan', 'Vanessa', 'Skylar', 'Whiteboard'];
 const numberOfStudents: number = students.length;
 console.log(`There are ${numberOfStudents} in the class.`);
