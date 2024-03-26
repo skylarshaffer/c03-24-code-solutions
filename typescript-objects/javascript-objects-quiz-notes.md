@@ -8,7 +8,7 @@ Answer the following questions in the provided markdown file before turning in t
   Objects are used to hold properties and their associated values.
 - What are object properties?
   Object properties are properties of objects. More specifically, they belong to the object and are nested within the object and must be accessed through the object.
-  CONCISE:
+  MORE CONCISE:
   Variables within an object.
 - Describe object literal notation.
   Object literal notation is an alternative to standard object notation. It differs by replacing all of 'new Object()' with an opening and closing curly bracket.
