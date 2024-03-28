@@ -1,0 +1,21 @@
+{
+  "env": {
+    "node": false,
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-inferrable-types": 0,
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        "variableDeclaration": true
+      }
+    ]
+  }
+}
