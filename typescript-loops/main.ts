@@ -9,7 +9,7 @@
 
 //  while loops
 //  getNumbersToTen
-function getNumbersToTen(): object {
+function getNumbersToTen(): number[] {
   const numbers = [];
   let currentNumber = 1;
   while (currentNumber <= 10) {
@@ -24,7 +24,7 @@ const getNumbersToTenResult = getNumbersToTen();
 console.log('getNumbersToTen() result:', getNumbersToTenResult);
 
 //  getEvenNumbersToTwenty
-function getEvenNumbersToTwenty(): object {
+function getEvenNumbersToTwenty(): number[] {
   const numbers = [];
   let currentNumber = 2;
   while (currentNumber <= 20) {
@@ -66,7 +66,7 @@ logEachCharacter('stopHittingYourself');
 
 //  doubleAll
 
-function doubleAll(numbers: any): object {
+function doubleAll(numbers: any): number[] {
   const doubled = [];
   for (let i = 0; i < numbers.length; i++) {
     doubled.push(numbers[i] * 2);
@@ -81,7 +81,7 @@ console.log(`doubleAll([1, 2, 3, 8, 0, 3, 77]) result:`, doubleAllResult);
 //  for in loops
 //  getKeys
 
-function getKeys(obj: Record<string, unknown>): object {
+function getKeys(obj: Record<string, unknown>): unknown[] {
   const keys = [];
   for (const key in obj) {
     keys.push(key);
@@ -98,7 +98,7 @@ console.log(
 
 //  getValues
 
-function getValues(obj: Record<string, unknown>): object {
+function getValues(obj: Record<string, unknown>): unknown[] {
   const values = [];
   for (const key in obj) {
     values.push(obj[key]);
