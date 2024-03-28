@@ -55,7 +55,6 @@ const callOtherFunctionResult: unknown = callOtherFunction(
   convertMinutesToSeconds,
   16
 );
-
 console.log(
   'callOtherFunction (calling convertMinutesToSeconds) exercise:',
   callOtherFunctionResult
