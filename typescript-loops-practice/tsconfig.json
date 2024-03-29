@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "../tsconfig.json",
+    "../node_modules/@learningfuze/lfz-config/config/tsconfig.json"
+  ],
+  "compilerOptions": {
+    "noEmit": false,
+    "moduleDetection": "legacy"
+  },
+  "exclude": ["*.test.js"]
+}
