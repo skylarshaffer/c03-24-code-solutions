@@ -10,8 +10,12 @@ Answer the following questions in the provided markdown file before turning in t
   Inline elements do not force a new line by default.
 - What are the default width and height of a block-level element?
   Block-level elements take up the full available width by default, and have the minimum necessary height to display all content.
+  CORRECTION:
+  Width of the page, height of the content.
 - What are the default width and height of an inline element?
   Inline elements only use as much width and height as necessary by default.
+  CORRECTION:
+  Width of the content, height of the content.
 
 ## Notes
 
