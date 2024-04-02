@@ -10,6 +10,11 @@ Answer the following questions in the provided markdown file before turning in t
   margin
   padding
   border
+  BETTER:
+  content
+  margin
+  padding
+  border
 - Which CSS property pushes boxes away from each other?
   Margin
 - Which CSS property add space between a box's content and its border?
