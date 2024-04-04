@@ -5,8 +5,7 @@ html {
 .page-title {
   font-size: 3rem;
   text-align: center;
-  display: flex;
   position: fixed;
-  left: 50%;
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
 }
