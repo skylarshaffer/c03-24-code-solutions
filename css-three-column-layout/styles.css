@@ -1,0 +1,58 @@
+body {
+  font-family: Lato, sans-serif;
+  background-color: #1996da;
+  font-size: 16px;
+  color: white;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.container {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  color: #ddd;
+}
+
+div {
+  text-align: center;
+}
+
+.icon {
+  width: 45%;
+  margin: auto;
+  background-color: white;
+  border: 0.1rem solid #ddd;
+  border-radius: 50%;
+  padding: 1.8rem;
+}
+
+img {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+/* columns */
+
+/* full */
+.column-full {
+  width: 100%;
+}
+
+/* columns third */
+.column-one-third {
+  width: calc(100% / 3);
+  max-width: 17.5rem;
+  margin: 2rem;
+}
