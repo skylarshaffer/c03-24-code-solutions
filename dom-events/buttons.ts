@@ -3,7 +3,7 @@ const $classClickButton = document.querySelector('.click-button');
 
 if (!$classClickButton) throw new Error('The $classClickButton query failed');
 
-function handleClick(event: any): void {
+function handleClick(event: Event): void {
   console.log('button clicked');
   console.log(event);
   console.log(event.target);
@@ -16,7 +16,7 @@ const $classHoverButton = document.querySelector('.hover-button');
 
 if (!$classHoverButton) throw new Error('The $classHoverButton query failed');
 
-function handleMouseover(event: any): void {
+function handleMouseover(event: Event): void {
   console.log('button hovered');
   console.log(event);
   console.log(event.target);
@@ -30,7 +30,7 @@ const $classDoubleClickButton = document.querySelector('.double-click-button');
 if (!$classDoubleClickButton)
   throw new Error('The $classDoubleClickButton query failed');
 
-function handleDoubleClick(event: any): void {
+function handleDoubleClick(event: Event): void {
   console.log('button double-clicked');
   console.log(event);
   console.log(event.target);
