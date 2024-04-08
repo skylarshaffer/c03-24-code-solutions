@@ -7,13 +7,13 @@ Answer the following questions in the provided markdown file before turning in t
 - Why do we log things to the console?
   We log things to the console to assist with debugging.
 - What is a "model"?
-  A model is a collection of objects.
+  A model is a recreation of something
 - Which "document" is being referred to in the phrase Document Object Model?
   The "document" is the current page.
 - What is the word "object" referring to in the phrase Document Object Model?
-  "Object" is referring to the document object that contains the objects we are querying.
+  "Object" is referring to the js recreation of our document object.
 - What is a DOM Tree?
-  A DOM tree is a nested representation of all objects in the DOM
+  A DOM tree is a nested representation of all objects in the DOM.
 - Give two examples of `document` methods that retrieve a single element from the DOM.
   `document.querySelector()`
   `document.getElementById()`
@@ -27,6 +27,8 @@ Answer the following questions in the provided markdown file before turning in t
   A `<script>` tag would need to be placed at the bottom of the HTML content because the content needs to be loaded before the script for the content to be queried by the script.
 - What does `document.querySelector()` take as its argument and what does it return?
   `document.querySelector()` takes a string as its argument, and that string must be formatted as a CSS selector. It returns one object that would be selected by the given selector.
+  CORRECTION:
+  Returns the first eligible element.
 - What does `document.querySelectorAll()` take as its argument and what does it return?
   `document.querySelectorAll()` takes a string as its argument, and that string must be formatted as a CSS selector. It returns all objects that would be selected by the given selector.
 
