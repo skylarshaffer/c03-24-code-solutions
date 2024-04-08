@@ -14,8 +14,10 @@ Answer the following questions in the provided markdown file before turning in t
   addEventListener
 - What is a callback function?
   A callback function is a code block that executes when an event listener fires.
+  CORRECTION (IMPORTANT INTERVIEW QUESTION):
+  A callback is a function passed into another function as an argument.
 - What object is passed into an event listener callback when the event fires?
-  THe event object is passed into an event listener callback when the event fires.
+  The event object is passed into an event listener callback when the event fires.
 - What is the `event.target`? If you weren't sure, how would you check? Where could you get more information about it?
   The `event.target` is a string that is a description of what happened to the object in question. If one weren't sure, they could log the event.target and check the console log. One could get more information from the MDN.
 
@@ -26,6 +28,7 @@ Answer the following questions in the provided markdown file before turning in t
   ```js
   element.addEventListener('click', handleClick());
   ```
+  In the first snippet, we are passing a reference to the function handleClick. The latter is calling the function and using the return value of the function as a parameter.
 
 ## Notes
 
