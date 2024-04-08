@@ -10,6 +10,10 @@ a:visited {
   height: max-content;
 }
 
+.navbar-item > a:link {
+  color: #a0a0a0;
+}
+
 .link-button {
   color: white;
 }
