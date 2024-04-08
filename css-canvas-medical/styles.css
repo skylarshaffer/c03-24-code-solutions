@@ -10,6 +10,10 @@ a:visited {
   height: max-content;
 }
 
+.navbar-item.text-link {
+  margin: 1.75rem;
+}
+
 .navbar-item > a:link {
   color: #a0a0a0;
 }
@@ -32,6 +36,19 @@ a:visited {
 
 .navbar {
   color: #a0a0a0;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+}
+
+.image-button {
+  margin: 1.5rem;
+  height: 20px;
+  box-sizing: border-box;
+}
+
+.navbar-right {
+  justify-content: flex-end;
 }
 
 body {
@@ -100,14 +117,11 @@ img {
 #entrance-splash {
   background-image: url('images/hero.jpg');
   color: white;
+  padding: 5rem;
 }
 
 #footer {
   background-color: #525351;
-}
-
-#header-logo {
-  max-height: 100%;
 }
 
 /* columns */
