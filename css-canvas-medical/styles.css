@@ -1,0 +1,132 @@
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.navbar-item {
+  height: max-content;
+}
+
+.link-button {
+  color: white;
+}
+
+.nav-button.text {
+  float: right;
+  color: white;
+  background-color: #294464;
+  border-radius: 0.25rem;
+  border: 0;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.navbar {
+  color: #a0a0a0;
+}
+
+body {
+  font-family: Avenir, sans-serif;
+}
+
+.clinicians-list {
+  text-align: center;
+}
+
+h2,
+h3 {
+  font-family: 'Tiempos Headline', serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.flex-item {
+  display: flex;
+}
+
+.justify-right {
+  margin-left: auto;
+  justify-content: right;
+}
+
+.justify-center {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.container.root {
+  padding: 0 min(180px, 7%);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+/* backgrounds */
+
+.clinicians {
+  background-color: #fafafa;
+}
+
+#entrance-splash {
+  background-image: url('images/hero.jpg');
+  color: white;
+}
+
+#footer {
+  background-color: #525351;
+}
+
+#header-logo {
+  max-height: 100%;
+}
+
+/* columns */
+
+/* full */
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+/* columns third */
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-two-thirds {
+  flex-basis: calc(100% * (2 / 3));
+}
+
+/* columns quarter */
+.column-one-quarter {
+  flex-basis: 25%;
+}
