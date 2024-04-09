@@ -32,8 +32,9 @@ document
 - What is the `textContent` property of an element object for?
   The textContent property of an element object is used to represent the text within element tags in HTML.
 - Name two ways to set the `class` attribute of a DOM element.
-  `.setAttribute()`
-  idk
+  `.setAttribute()` method
+  `.className` property
+  `.className.add()` method
 - What are two advantages of defining a function to do create something (like the work of creating a DOM tree)?
   Defining a function to create something is useful because it allows for better code organization and readability, it is more scalable, and it is easier to loop through.
 
