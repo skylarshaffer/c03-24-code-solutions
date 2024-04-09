@@ -3,8 +3,12 @@
   justify-content: flex-end;
   width: 100%;
   white-space: nowrap;
+  align-items: center;
 }
 
+/*  links */
+
+/*  button-link */
 .button-link {
   color: white;
   background-color: #294464;
@@ -18,8 +22,26 @@
   margin: 1rem 0;
 }
 
+/*  text-link */
+#navbar .text-link {
+  margin: 1.75rem;
+  color: #a0a0a0;
+}
+
+/*  links end */
+
+/* header-logo */
 #header-logo {
   margin-right: auto;
+}
+
+/* ------------------standard------------------ */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 .container {
