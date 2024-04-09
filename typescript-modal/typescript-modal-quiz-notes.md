@@ -5,7 +5,7 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is the `<dialog>` element used for?
-  The dialog element is used for interactive overlays that restrict interactivity until closed.
+  The dialog element is used for interactive overlays or pop-ups, modal or non-modal.
 - How do you display a modal dialog?
   You display a modal dialog with the `showModal()` method of the modal DOM object.
 - How do you hide a modal dialog?
