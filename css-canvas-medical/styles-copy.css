@@ -1,0 +1,58 @@
+#navbar {
+  border-bottom: 2px solid black;
+  justify-content: flex-end;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.button-link {
+  color: white;
+  background-color: #294464;
+  border-radius: 0.25rem;
+  border: 0;
+}
+
+#navbar .button-link {
+  float: right;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+#header-logo {
+  margin-right: auto;
+}
+
+.container {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+/* columns */
+
+/* full */
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+/* columns third */
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-two-thirds {
+  flex-basis: calc(100% * (2 / 3));
+}
+
+/* columns quarter */
+.column-one-quarter {
+  flex-basis: 25%;
+}
