@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'UD Shin Go NT Regular', sans-serif;
+  font-size: calc(2vh + 2vw);
+}
+
+span {
+  margin: 0.05rem;
+}
+
+div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span.current {
+  border-bottom: 0.15rem solid black;
+}
+
+span.right {
+  color: green;
+  border-bottom-color: green;
+}
+
+span.wrong {
+  color: red;
+  border-bottom-color: red;
+}
