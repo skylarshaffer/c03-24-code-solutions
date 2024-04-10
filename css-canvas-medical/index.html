@@ -7,74 +7,56 @@
     <title>CSS Challenge - Canvas Medical</title>
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-copy.css" />
   </head>
   <body>
     <!--navbar top-->
-    <div class="container root navbar" id="navbar-top">
-      <div class="navbar-item flex-item nav-button" id="header-logo">
-        <a
-          class="button image-button"
-          href="index.html"
-          title="Go to site home">
+    <div class="container navbar row" id="navbar">
+      <div id="header-logo">
+        <a class="image-link" href="index.html" title="Go to site home">
           <img src="images/logo-blue.svg" alt="canvas logo" />
         </a>
       </div>
-      <div class="navbar flex-item navbar-right justify-right">
-        <div class="navbar-item flex-item justify-right text-link" id="product">
-          <a href="product.html">Product</a>
-        </div>
-        <div
-          class="navbar-item flex-item justify-right text-link"
-          id="implementation">
-          <a href="implementation.html">Implementation</a>
-        </div>
-        <div
-          class="navbar-item flex-item justify-right text-link"
-          id="about-us">
-          <a href="about-us.html">About Us</a>
-        </div>
-        <div class="navbar-item flex-item justify-right text-link" id="blog">
-          <a href="blog.html">Blog</a>
-        </div>
-        <div class="navbar-item flex-item justify-right" id="contact-us-top">
-          <div class="nav-button flex-item text">
-            <a class="button link-button" href="contact.html">Contact Us</a>
-          </div>
-        </div>
+      <div>
+        <a href="product.html" class="text-link">Product</a>
       </div>
+      <div>
+        <a href="implementation.html" class="text-link">Implementation</a>
+      </div>
+      <div>
+        <a href="about-us.html" class="text-link">About Us</a>
+      </div>
+      <div>
+        <a href="blog.html" class="text-link">Blog</a>
+      </div>
+      <a href="contact-us.html" class="button-link">Contact Us</a>
     </div>
     <!--entrance splash-->
-    <div class="container root">
-      <div class="container" id="entrance-splash">
-        <div class="row">
-          <div class="column-half">
-            <div class="row">
-              <div class="column-full">
-                <h2>The EMR Reimagined for Primary Care</h2>
-              </div>
+    <div class="container hero">
+      <div class="row">
+        <div class="column-half">
+          <div class="row">
+            <div class="column-full">
+              <h2>The EMR Reimagined for Primary Care</h2>
             </div>
-            <div class="row">
-              <div class="column-full">
-                <p>
-                  Can't remember the last time you talked with a patient without
-                  focusing on the EMR? Canvas lets you rediscover joy in the
-                  work you do. Capture meaningful data, identify gaps in care,
-                  and move seamlessly between tasks within the platform. You
-                  stay present with patients while your whole care team stays
-                  up-to-speed. Be a better doctor with Canvas, designed for
-                  primary care providers with the help of primary care
-                  providers.
-                </p>
-              </div>
+          </div>
+          <div class="row">
+            <div class="column-full">
+              <p>
+                Can't remember the last time you talked with a patient without
+                focusing on the EMR? Canvas lets you rediscover joy in the work
+                you do. Capture meaningful data, identify gaps in care, and move
+                seamlessly between tasks within the platform. You stay present
+                with patients while your whole care team stays up-to-speed. Be a
+                better doctor with Canvas, designed for primary care providers
+                with the help of primary care providers.
+              </p>
             </div>
-            <div class="row">
-              <div class="column-full">
-                <div class="nav-button flex-item text">
-                  <a class="button link-button text" href="get-started.html"
-                    >Get Started</a
-                  >
-                </div>
+          </div>
+          <div class="row">
+            <div class="column-full">
+              <div>
+                <a class="button-link" href="get-started.html">Get Started</a>
               </div>
             </div>
           </div>
@@ -82,49 +64,47 @@
       </div>
     </div>
     <!--clinicians-->
-    <div class="container root clinicians">
-      <div class="container clinicians">
-        <div class="row">
-          <div class="column-full">
-            <div class="row">
-              <div class="column-one-third justify-center">
-                <div class="row">
-                  <div class="column-full">
-                    <h3 class="align-center">Clinicians Prefer Canvas</h3>
-                  </div>
+    <div class="container clinicians">
+      <div class="row">
+        <div class="column-full">
+          <div class="row">
+            <div class="column-one-third justify-center">
+              <div class="row">
+                <div class="column-full">
+                  <h3 class="align-center">Clinicians Prefer Canvas</h3>
                 </div>
-                <div class="row">
-                  <div class="column-full">
-                    <p class="align-center">
-                      Physician-owned primary care practices across the country
-                      have already made Canvas the fabric of their care.
-                    </p>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="column-full">
+                  <p class="align-center">
+                    Physician-owned primary care practices across the country
+                    have already made Canvas the fabric of their care.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="column-half">
-            <ul class="clinicians-list">
-              <li>Cascade Family Practice, Portland OR</li>
-              <li>Temescal Creek Medicine, Oakland CA</li>
-              <li>Ward Medical Clinic, Bonifay FL</li>
-            </ul>
-          </div>
-          <div class="column-half">
-            <ul class="clinicians-list">
-              <li>Caribou Medical, Towanda PA</li>
-              <li>San Juan Healthcare, Friday Harbor WA</li>
-              <li>Bay Tree Family Care, Red Bay AL</li>
-            </ul>
-          </div>
+      </div>
+      <div class="row">
+        <div class="column-half">
+          <ul class="clinicians-list">
+            <li>Cascade Family Practice, Portland OR</li>
+            <li>Temescal Creek Medicine, Oakland CA</li>
+            <li>San Juan Healthcare, Friday Harbor WA</li>
+          </ul>
+        </div>
+        <div class="column-half">
+          <ul class="clinicians-list">
+            <li>Ward Medical Clinic, Bonifay FL</li>
+            <li>Caribou Medical, Towanda PA</li>
+            <li>Bay Tree Family Care, Red Bay AL</li>
+          </ul>
         </div>
       </div>
     </div>
     <!--learn more-->
-    <div class="container root" id="learn-more">
+    <div class="container learn-more">
       <div class="row">
         <div class="column-half">
           <div class="row">
@@ -139,16 +119,12 @@
           </div>
         </div>
         <div class="column-half">
-          <div class="nav-button justify-right flex-item text">
-            <a class="button link-button" href="get-started.html"
-              >Get Started</a
-            >
-          </div>
+          <a class="button-link" href="get-started.html">Get Started</a>
         </div>
       </div>
     </div>
     <!--footer-->
-    <div class="container root" id="footer">
+    <div class="container footer" id="footer">
       <div class="row">
         <div class="column-half">
           <div class="row">
@@ -161,10 +137,10 @@
           <div class="row">
             <div class="column-half">
               <div class="contact-info">
-                <p>
-                  2307 Irving Street, Suite 228 San Francisco CA 94122 (800)
-                  370-1416 info@canvasmedical.com
-                </p>
+                <p>2307 Irving Street, Suite 228</p>
+                <p>San Francisco CA 94122</p>
+                <p>(800) 370-1416</p>
+                <p>info@canvasmedical.com</p>
               </div>
             </div>
           </div>
@@ -187,7 +163,7 @@
         <div class="column-one-quarter">
           <div class="row">
             <div class="column-full">
-              <h4>Company</h4>
+              <h4>Product</h4>
             </div>
           </div>
           <div class="row">
@@ -204,7 +180,7 @@
       </div>
     </div>
     <!--navbar bottom-->
-    <div class="container root navbar" id="navbar-bottom">
+    <div class="container navbar" id="navbar-bottom">
       <div class="row">
         <div class="flex-item">
           <div class="row">
