@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+div.sky {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  position: relative;
+  display: inline-block;
+  height: calc((100vh + 100vw) / 8);
+  width: calc((100vh + 100vw) / 8);
+}
+
+.sun > input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+span {
+  display: block;
+  border-radius: 50%;
+  height: calc((100vh + 100vw) / 8);
+  width: calc((100vh + 100vw) / 8);
+  border-width: 0;
+}
+
+input:checked + span {
+  background-color: #faea84;
+  box-shadow: 0 0 40px -3px #faea84;
+}
+
+input:not(:checked) + span {
+  background-color: #252525;
+  box-shadow: 0 -15px 0 5px #0c0c0c;
+}
+
+div:has(input:checked) {
+  background-color: #fef9f1;
+}
+
+div:has(input:not(:checked)) {
+  background-color: #111;
+}
