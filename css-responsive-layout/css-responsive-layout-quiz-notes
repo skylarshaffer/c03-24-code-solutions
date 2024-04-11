@@ -15,6 +15,9 @@ Answer the following questions in the provided markdown file before turning in t
 - If you introduce CSS rules for a smaller `min-width` _after_ the styles for a larger `min-width` in your style sheet, the CSS rules for the **smaller** `min-width` will "win". Why is that?
 
   > CSS rules for smaller `min-width` must come after styles for a larger `min-width` due to the CSS cascade and the lack of an upper limit on the smaller `min-width` rule. If both rules apply to a screen size, the rule that comes first in the cascade will take priority.
+  > ```
+  > CORRECTION (Specificity):
+  > Source order
 
 ## Notes
 
