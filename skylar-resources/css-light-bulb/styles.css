@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+  body {
+    background-color: #111;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      user-select: none;
+      display: block;
+      height: calc(12 (vh+vw));
+      width: calc(12 (vh+vw));
+      border-radius: 50%;
+
+      input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+
+      span {
+        background-color: #252525;
+        box-shadow: 0 -15px 0 5px #0c0c0c;
+        position: relative;
+        display: inline-block;
+        height: calc((100vh + 100vw) / 8);
+        width: calc((100vh + 100vw) / 8);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  body:has(input:checked) {
+    background-color: #fef9f1;
+
+    label {
+      span {
+        background-color: #faea84;
+        box-shadow: 0 0 40px -3px #faea84;
+      }
+    }
+  }
+}
