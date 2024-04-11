@@ -9,6 +9,7 @@ Answer the following questions in the provided markdown file before turning in t
   transition-duration
   transition-timing-function
   transition-delay
+  NEW (not widely supported):
   transition-behavior
 - What does the `transform` property do?
   The `transform` property lets you visually manipulate elements by CSS selector.
