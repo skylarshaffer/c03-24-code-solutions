@@ -1,4 +1,5 @@
-const bookArray: Record<string, string>[] = [
+'use strict';
+const bookArray = [
   {
     isbn: '978-1491929483',
     title:
@@ -17,16 +18,13 @@ const bookArray: Record<string, string>[] = [
     author: 'Phil Sturgeon & Laura Bohill',
   },
 ];
-
 console.log('bookArray:', bookArray);
 console.log('typeof bookArray:', typeof bookArray);
 console.log('JSON.stringify(bookArray):', JSON.stringify(bookArray));
-
 const studentJSON = `{
   "id": 185712,
   "name": "Jane Doe"
 }`;
-
 console.log('studentJSON:', studentJSON);
 console.log('typeof studentJSON:', typeof studentJSON);
 console.log('JSON.stringify(studentJSON):', JSON.parse(studentJSON));
