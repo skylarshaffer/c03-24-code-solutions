@@ -16,13 +16,13 @@ function handleClick(event) {
     for (let i = 0; i < $tab.length; i++) {
       //  if 'element' equals 'clicked element'
       if ($tab[i] === $eventTarget) {
-        //  overwrite 'class' with 'tab active'
-        $tab[i].className = 'tab active';
+        //  add 'active' to 'class'
+        $tab[i].classList.add('active');
       }
       //  all other elements
       else {
-        //  overwrite 'class' with 'tab'
-        $tab[i].className = 'tab';
+        //  remove 'active' from 'class'
+        $tab[i].classList.remove('active');
       }
     }
     //  set 'variable' to 'value of data-view attribute of clicked element'
@@ -31,16 +31,16 @@ function handleClick(event) {
     for (let i = 0; i < $view.length; i++) {
       //  if 'element data-view' equals 'clicked element data-view'
       if ($view[i].dataset.view === $eventTargetDataView) {
-        //  overwrite 'class' with 'view'
-        $view[i].className = 'view';
+        //  remove 'hidden' from 'class'
+        $view[i].classList.remove('hidden');
       }
       //  all other elements
       else {
-        //  overwrite 'class' with 'view hidden'
-        $view[i].className = 'view hidden';
+        //  add 'hidden' to 'class'
+        $view[i].classList.add('hidden');
       }
     }
   }
 }
-//  set click listener on tab container
+//  set 'click' listener on 'tab' container
 $tabContainer.addEventListener('click', handleClick);
