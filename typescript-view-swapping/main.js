@@ -14,7 +14,6 @@ function handleClick(event) {
     console.log('Tab clicked (target matches tab selector).');
     //  for each 'element' of class 'tab'
     for (let i = 0; i < $tab.length; i++) {
-      console.log(i);
       //  if 'element' equals 'clicked element'
       if ($tab[i] === $eventTarget) {
         //  overwrite 'class' with 'tab active'
