@@ -32,15 +32,15 @@ Answer the following questions in the provided markdown file before turning in t
 
 - At what steps of the solution would it be helpful to log things to the console?
 
-  > It be helpful to log things to the console at _many_ steps of the solution. Most notably, each time a variable is defined and under each conditional statement.
+  > It is helpful to log things to the console at _many_ steps of the solution. Most notably, each time a variable is defined and under each conditional statement.
 
 - If you were to add another tab and view to your HTML, but you didn't use event delegation, how would your TypeScript code be written instead?
 
-  > If you were to add another tab and view to your HTML, but you didn't use event delegation, your TypeScript would instead have a listener for each tab.
+  > Without event delegation, when adding another tab and view to the HTML, the TypeScript would need to be modified instead of left alone, and a listener would be needed for each tab.
 
 - If you didn't use a loop to conditionally show or hide the views in the page, how would your TypeScript code be written instead?
 
-  > If you didn't use a loop to conditionally show or hide the views in the page, your TypeScript would instead need a conditional statement for each div element that you wanted to check for eligibility.
+  > Without using a loop to conditionally show or hide the views in the page, TypeScript would instead need a conditional statement for each div element that needed to be checked for eligibility.
 
 ## Notes
 
