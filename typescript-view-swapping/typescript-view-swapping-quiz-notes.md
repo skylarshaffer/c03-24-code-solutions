@@ -46,26 +46,10 @@ Answer the following questions in the provided markdown file before turning in t
 
 All student notes should be written here.
 
-How to write `Code Examples` in markdown
+- Arrow function for condensed event listeners.
 
-for JS:
-
-```javascript
-const data = 'Howdy';
-```
-
-for HTML:
-
-```html
-<div>
-  <p>This is text content</p>
-</div>
-```
-
-for CSS:
-
-```css
-div {
-  width: 100%;
-}
-```
+  > ```javascript
+  > $htmlElement.addEventListener('click', => (event:Event) {
+  >   function
+  > })
+  > ```
