@@ -6,18 +6,13 @@ interface RangeReportObject {
   average: number;
 }
 
-function getTotal(start: number, end: number): number {
-  //  Gauss summation
-  const getTotalResult = end * ((end + 1) / 2) - (start - 1) * (start / 2);
-  return getTotalResult;
-}
-
 function getRangeReport(start: number, end: number): RangeReportObject {
   const odds = [];
   const evens = [];
   const range = [];
   const average = (start + end) / 2;
-  const total = getTotal(start, end);
+  //  Gauss summation
+  const total = end * ((end + 1) / 2) - (start - 1) * (start / 2);
   for (let i = start; i <= end; i++) {
     range.push(i);
     if (i % 2 === 0) {
