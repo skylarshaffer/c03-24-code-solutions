@@ -43,4 +43,4 @@ function getRangeReport(start, end) {
   };
   return getRangeReportResult;
 }
-console.log(getRangeReport(5, 231));
+console.log('getRangeReport(5,231):', getRangeReport(5, 231));

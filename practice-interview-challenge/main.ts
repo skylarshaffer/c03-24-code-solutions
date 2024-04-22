@@ -56,4 +56,4 @@ function getRangeReport(start: number, end: number): RangeReportObject {
   return getRangeReportResult;
 }
 
-console.log(getRangeReport(5, 231));
+console.log('getRangeReport(5,231):', getRangeReport(5, 231));
