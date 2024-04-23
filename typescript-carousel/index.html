@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="row">
+        <div class="column-full">
+          <div class="container" id="carousel">
+            <div class="column-one-seventh center-both">
+              <i class="fa-solid fa-angle-left arrow"></i>
+            </div>
+            <div class="column-full column-stretch">
+              <div class="row row-stretch">
+                <div class="container" id="carousel-images">
+                  <img
+                    src="images/001.png"
+                    data-entry-id="1"
+                    data-view="selected"
+                    alt="Bulbasaur" />
+                  <img
+                    src="images/004.png"
+                    data-entry-id="2"
+                    alt="Charmander" />
+                  <img src="images/007.png" data-entry-id="3" alt="Squirtle" />
+                  <img src="images/025.png" data-entry-id="4" alt="Pikachu" />
+                  <img
+                    src="images/039.png"
+                    data-entry-id="5"
+                    alt="Jigglypuff" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="container" id="carousel-circles">
+                  <i class="fa-solid fa-circle" data-entry-id="1"></i>
+                  <i class="fa-regular fa-circle" data-entry-id="2"></i>
+                  <i class="fa-regular fa-circle" data-entry-id="3"></i>
+                  <i class="fa-regular fa-circle" data-entry-id="4"></i>
+                  <i class="fa-regular fa-circle" data-entry-id="5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="column-one-seventh center-both">
+              <i class="fa-solid fa-angle-right arrow"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
