@@ -18,7 +18,7 @@ Answer the following questions in the provided markdown file before turning in t
 - What is the syntax for `Array` destructuring?
 
   > ```javascript
-  > [variable1: optionalAlias1, variable2: optionalAlias2] = arrayWithPropertiesVariable1AndVariable2;
+  > [alias1, , alias3] = array;
   > ```
 
 - How can you tell the difference between destructuring and creating `Object`/`Array` literals?
