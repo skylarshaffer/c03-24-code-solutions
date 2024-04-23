@@ -24,8 +24,19 @@ for (const key in domQueries) {
   if (!domQueries[key]) throw new Error(`The ${key} dom query failed`);
 }
 
-function moveCarousel(): void {
+function moveCarouselTimer(): void {
   incrementCurrent();
+  moveCarousel();
+}
+
+function restartMoveCarouselTimer(): void {
+  clearInterval(moveCarouselTimerId);
+  moveCarouselTimerId = setInterval(moveCarouselTimer, 3000);
+}
+
+let moveCarouselTimerId = setInterval(moveCarouselTimer, 3000);
+
+function moveCarousel(): void {
   for (let i = 0; i < $carouselImagesArray.length; i++) {
     const currentImage = $carouselImagesArray[i];
     if (data.current.toString() !== (currentImage.dataset.entryId as string)) {
@@ -46,13 +57,6 @@ function moveCarousel(): void {
   }
 }
 
-let moveCarouselId = setInterval(moveCarousel, 3000);
-
-function restartMoveCarousel(): void {
-  clearInterval(moveCarouselId);
-  moveCarouselId = setInterval(moveCarousel, 3000);
-}
-
 function incrementCurrent(): void {
   if (data.current === $carouselImagesArray.length) {
     data.current = 1;
@@ -68,7 +72,7 @@ function decrementCurrent(): void {
 $carousel.addEventListener('click', (event: Event) => {
   const eventTarget = event.target as HTMLElement;
   if (eventTarget.tagName === 'I') {
-    restartMoveCarousel();
+    restartMoveCarouselTimer();
     if (eventTarget.classList.contains('fa-angle-left')) {
       decrementCurrent();
     } else if (eventTarget.classList.contains('fa-angle-right')) {
@@ -76,27 +80,18 @@ $carousel.addEventListener('click', (event: Event) => {
     } else {
       data.current = ~~(eventTarget.dataset.entryId as string);
     }
-    for (let i = 0; i < $carouselImagesArray.length; i++) {
-      const currentImage = $carouselImagesArray[i];
-      if (
-        data.current.toString() !== (currentImage.dataset.entryId as string)
-      ) {
-        currentImage.dataset.view = '';
-      } else {
-        currentImage.dataset.view = 'selected';
-      }
-    }
-    for (let i = 0; i < $carouselCirclesArray.length; i++) {
-      if ($carouselCirclesArray.length < $carouselImagesArray.length)
-        throw new Error('There are less circles than images. Please fix.');
-      const currentCircle = $carouselCirclesArray[i];
-      if (
-        data.current.toString() !== (currentCircle.dataset.entryId as string)
-      ) {
-        currentCircle.classList.replace('fa-solid', 'fa-regular');
-      } else {
-        currentCircle.classList.replace('fa-regular', 'fa-solid');
-      }
-    }
+    moveCarousel();
+  }
+});
+
+document.addEventListener('keydown', (event: KeyboardEvent) => {
+  if (event.key === 'ArrowLeft') {
+    restartMoveCarouselTimer();
+    decrementCurrent();
+    moveCarousel();
+  } else if (event.key === 'ArrowRight') {
+    restartMoveCarouselTimer();
+    incrementCurrent();
+    moveCarousel();
   }
 });
