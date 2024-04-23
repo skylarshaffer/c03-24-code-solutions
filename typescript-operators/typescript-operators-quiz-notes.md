@@ -8,17 +8,21 @@ Answer the following questions in the provided markdown file before turning in t
 
   > The `&&` (logical AND) and `||` (logical OR) operators can be used in `if` statements to evaluate multiple expressions and evaluate one truthy or falsy value for all statements. They can also be used to execute following code based on preceding code when they are outside of an `if` statement.
 
+  > CORRECTION:
+  >
+  > `&&` returns first falsy value. `||` returns first truthy value.
+
 - What is "short-circuit evaluation" and how does it apply to `&&` and `||`?
 
   > Short circuit evaluation is used to execute code until a short circuit (or conditional fail) occurs. When the short circuit occurs, instead of erroring, the code moves on past the evaluation.
 
 - What is the `??` (nullish coalescing) operator and how does it differ from `||`?
 
-  > The `??` (nullish coalescing) operator continues execution only if the preceding expression result is null. By comparison, the `||` continues execution only if the preceding expression result is truthy.
+  > The `??` (nullish coalescing) operator continues execution only if the preceding expression result is null or undefined. By comparison, the `||` continues execution only if the preceding expression result is truthy.
 
 - What is the `?:` (ternary) operator? How does it differ from `if/else`?
 
-  > The `?:` (ternary) operator continues execution only if the preceding expression result is undefined. It differs from `if/else` because if an expression results in undefined, execution continues instead of throwing an error.
+  > The `?:` (ternary) operator continues execution only if the preceding expression result is undefined. It differs from `if/else` because the result can be assigned to a variable.
 
 - What is the `?.` (optional chaining) operator? When would you use it?
 
