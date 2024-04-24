@@ -4,7 +4,8 @@
   "private": true,
   "description": "Code exercise solutions.",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lmsinit": "archive_name=`find . -type f -name '*.tar.gz'` && tar -xf $archive_name && rm $archive_name && exercise_name=`echo $archive_name | sed 's/.tar.gz//g' | sed 's,./,,g'` && sed -z -i 's/\\n\\n- /\\n\\n  > \\n\\n- /g' ./$exercise_name/$exercise_name-quiz-notes.md && sed -z -i 's/\\n\\n## Notes/\\n\\n  > \\n\\n## Notes/g' ./$exercise_name/$exercise_name-quiz-notes.md && sed -z -i 's/:\\n\\n  > \\n\\n- /\\n\\n- /g' ./$exercise_name/$exercise_name-quiz-notes.md"
   },
   "devDependencies": {
     "@learningfuze/lfz-config": "^1.0.0",
