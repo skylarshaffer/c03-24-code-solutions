@@ -1,0 +1,500 @@
+   68  git push origin issue-1-create-an-entry
+   69  npx tsc --watch
+   70  git add .
+   71  git commit -m "Photo URL validation (greatly simplified using validityCheck()). #1"
+   72  git push origin issue-1-create-an-entry 
+   73  git pull origin main
+   74  git add .
+   75  git commit -m "Fixed height on desktop. #1"
+   76  git push origin issue-1-create-an-entry 
+   77  npx tsc --watch
+   78  git add .
+   79  git push origin issue-1-create-an-entry 
+   80  npx tsc --watch
+   81  git add .
+   82  git commit -m "Cleaned up code. Removed console logs but kept comments. #1"
+   83  git push origin issue-1-create-an-entry 
+   84  git add .
+   85  git status
+   86  git commit -m "Removed fonts.css. #1"
+   87  git push origin issue-1-create-an-entry 
+   88  git add .
+   89  npx tsc --watch
+   90  git commit -m "Fixed based on feedback. #1"
+   91  git push origin issue-1-create-an-entry 
+   92  git pull origin main
+   93  git switch -c issue-2-user-can-view-their-entries
+   94  git add .
+   95  git add .
+   96  git commit -m "Added empty unordered list to div. #2"
+   97  git push origin issue-2-user-can-view-their-entries 
+   98  git add .
+   99  git commit -m "Added example photos to /images. #2"
+  100  git push origin issue-2-user-can-view-their-entries 
+  101  git add css/layout.css 
+  102  git status
+  103  git commit -m "Reworked min-width due to Stylelint error. #2"
+  104  git push origin issue-2-user-can-view-their-entries 
+  105  npx tsc --watch
+  106  git add .
+  107  git commit -m "Fixed alt text on uploaded and broken images. #2"
+  108  git push origin issue-2-user-can-view-their-entries 
+  109  git add css/standard.css 
+  110  git commit -m "Added ul override to standard.css. #2"
+  111  git push origin issue-2-user-can-view-their-entries 
+  112  git add .
+  113  git commit -m "Created and formatted dummy entries. Ready for JS. #2"
+  114  git add .
+  115  git commit -m "Created and formatted dummy entries. Ready for JS. #2"
+  116  git add .
+  117  git commit -m "Created and formatted dummy entries. Ready for JS. #2"
+  118  git add .
+  119  git commit -m "Created and formatted dummy entries. Ready for JS. #2"
+  120  git push origin issue-2-user-can-view-their-entries 
+  121  npx tsc --watch
+  122  git add .
+  123  git commit -m "Created renderEntry function. #2"
+  124  git push origin issue-2-user-can-view-their-entries 
+  125  npx tsc --watch
+  126  git add .
+  127  git commit -m "Added DOMContentLoaded listener to loop render function. #2"
+  128  git push origin issue-2-user-can-view-their-entries 
+  129  git add .
+  130  git commit -m "Replaced dummy entries with placeholder notification. #2"
+  131  git push origin issue-2-user-can-view-their-entries 
+  132  npx tsc --watch
+  133  git add .
+  134  git commit -m "Added toggleNoEntries function in addition to better replacement functions. #2"
+  135  git push origin issue-2-user-can-view-their-entries 
+  136  npx tsc --watch
+  137  git add .
+  138  git commit -m "Created viewSwap function. #2"
+  139  git push origin issue-2-user-can-view-their-entries 
+  140  npx tsc --watch
+  141  git add .
+  142  git commit -m "Add navbar anchor for entries. #2"
+  143  git push origin issue-2-user-can-view-their-entries 
+  144  npx tsc --watch
+  145  npx tsc --watch
+  146  git add .
+  147  git commit -m "Added 'NEW' button. #2"
+  148  git push origin issue-2-user-can-view-their-entries 
+  149  npx tsc --watch
+  150  git add .
+  151  git commit -m "Updated submit callback. #2"
+  152  git push origin issue-2-user-can-view-their-entries 
+  153  npx tsc --watch
+  154  git add .
+  155  git commit -m "Updated DOMContentLoaded callback. Need to fix 'NEW' button desktop before pull. #2"
+  156  git push origin issue-2-user-can-view-their-entries 
+  157  git add .
+  158  git add .
+  159  git commit -m "Fixed 'NEW' button on desktop and tested code. Ready to submit for review. #2"
+  160  git push origin issue-2-user-can-view-their-entries 
+  161  git add .
+  162  git commit -m "Added pointer on hover for buttons and anchors. #2"
+  163  git push origin issue-2-user-can-view-their-entries 
+  164  git commit -m "Spent an hour trying to control items shifting and it was just the scrollbar. #2"
+  165  git add .
+  166  git commit -m "Spent an hour trying to control items shifting and it was just the scrollbar. #2"
+  167  git push origin issue-2-user-can-view-their-entries 
+  168  npx tsc --watch
+  169  git add .
+  170  git commit -m "Fixed no entries message erroneously hiding on every DOM load. #2"
+  171  git push origin issue-2-user-can-view-their-entries 
+  172  git pull origin main
+  173  git switch -c issue-3-user-can-edit-an-entry
+  174  npx tsc --watch
+  175  git add .
+  176  git commit -m "Changed all .setAttribute('class','*') to .className = '*' for better readability. #3"
+  177  git push origin issue-3-user-can-edit-an-entry 
+  178  git add .
+  179  git commit -m "Fixed horizontal scrollbar showing when vertical present, retained layout shift fix. #3"
+  180  git push origin issue-3-user-can-edit-an-entry 
+  181  npx tsc --watch
+  182  npx tsc --watch
+  183  git add .
+  184  git commit -m "Added edit pencil and entry-id to each li. #3"
+  185  git push origin issue-3-user-can-edit-an-entry 
+  186  npx tsc --watch
+  187  git add .
+  188  git commit -m "Added ul handleClick and added all requirements except form populate. #3"
+  189  git push origin issue-3-user-can-edit-an-entry 
+  190  npx tsc --watch
+  191  git add .
+  192  git commit -m "Completed handleClick. #3"
+  193  git push origin issue-3-user-can-edit-an-entry 
+  194  npx tsc --watch
+  195  git add .
+  196  git commit -m "Updated handleSubmit to perform most functions only on null data.editing. #3"
+  197  git push origin issue-3-user-can-edit-an-entry 
+  198  npx tsc --watch
+  199  npx tsc --watch
+  200  npx tsc --watch
+  201  git add .
+  202  git commit -m "Finished handleSubmit and added a few optimizations. Pre-final touches. #3"
+  203  git push origin issue-3-user-can-edit-an-entry 
+  204  npx tsc --watch
+  205  git add .
+  206  git commit -m "Fixed a number of errors with handleSubmit discovered when testing. So long as the data wasn't created prior to this commit will work perfectly. #3"
+  207  git commit --amend -m "Fixed a number of errors with handleSubmit discovered when testing. So long as the data wasn't created prior to this commit, code should work. #3"
+  208  git push origin issue-3-user-can-edit-an-entry 
+  209  git add .
+  210  git commit -m "CSS organizational and concision tweaks. No visual or functional changes. Still need to fix edit wipe upon 'NEW' press. #3"
+  211  git push origin issue-3-user-can-edit-an-entry 
+  212  npx tsc --watch
+  213  git add .
+  214  git commit -m "Fixed unsaved edit modifying 'NEW' field values. 'NEW' now always resets values and data.editing. #3"
+  215  git push origin issue-3-user-can-edit-an-entry 
+  216  git switch main
+  217  git pull origin main
+  218  git switch -c issue-4-user-can-delete-an-entry
+  219  git add .
+  220  git commit -m "Fixed div width when no entries error from recent css trimming. #4"
+  221  git push origin issue-4-user-can-delete-an-entry 
+  222  git add .
+  223  git commit -m "Fixed div width when entries from recent css trimming. #4"
+  224  git push origin issue-4-user-can-delete-an-entry 
+  225  npx tsc --watch
+  226  git add .
+  227  git commit -m "Added 'Delete Entry' button with correct visibility behavior. No functionality yet. #4"
+  228  git push origin issue-4-user-can-delete-an-entry 
+  229  npx tsc --watch
+  230  git add .
+  231  git commit -m "Added 'Delete Entry' confirmation modal with two buttons and changed backdrop transparency. #4"
+  232  git push origin issue-4-user-can-delete-an-entry 
+  233  npx tsc --watch
+  234  git add .
+  235  git commit -m "Added 'Confirm' functionality and added all necessary features. Only testing and visual left. #4"
+  236  git push origin issue-4-user-can-delete-an-entry 
+  237  git add .
+  238  git commit -m "Visual changes done. Testing and then submiting. #4"
+  239  git push origin issue-4-user-can-delete-an-entry 
+  240  git add .
+  241  git commit -m "Deleted example images. Holding off on stretch/improvements until final pull approved. #4"
+  242  git push origin issue-4-user-can-delete-an-entry 
+  243  git switch main
+  244  git pull origin main
+  245  git switch -c stretch-features
+  246  npx tsc --watch
+  247  git add .
+  248  git commit -m "Minor tweaks."
+  249  npx tsc --watch
+  250  npx tsc --watch
+  251  git add .
+  252  git commit -m "Improved dom query error accuracy, organization, and readability."
+  253  git --amend commit -m "Improved dom query error specificity, organization, and readability."
+  254  git commit --amend "Improved dom query error specificity, organization, and readability."
+  255  git commit -m --amend "Improved dom query error specificity, organization, and readability."
+  256  git commit --amend -m "Improved dom query error specificity, organization, and readability."
+  257  git push origin issue-4-user-can-delete-an-entry 
+  258  git push origin stretch-features
+  259  npx tsc --watch
+  260  git add .
+  261  git commit --amend -m "Changed toggleNoEntries to checkNoEntries for redundancy cleanup and readability."
+  262  git push origin stretch-features
+  263  git pull origin stretch-features 
+  264  git stash
+  265  git pull origin stretch-features 
+  266  git pull --rebase
+  267  git pull origin stretch-features 
+  268  git pull origin stretch-features  --rebase
+  269  git switch stretch-features 
+  270  git rebase --quit
+  271  git switch stretch-features 
+  272  git reset
+  273  git switch stretch-features 
+  274  git stash
+  275  git switch stretch-features 
+  276  git pull origin stretch-features 
+  277  git pull origin stretch-features 
+  278  git reset --hard origin/stretch-features 
+  279  git push origin stretch-features 
+  280  git pull origin stretch-features 
+  281  git rebase --quit
+  282  git pull origin stretch-features 
+  283  git push origin stretch-features 
+  284  npx tsc
+  285  npx tsc --watch
+  286  git add .
+  287  git status
+  288  git commit -m "Changed toggleNoEntries to checkNoEntries for redundancy cleanup and readability."
+  289  git push origin stretch-features 
+  290  git add .
+  291  git commit -m "Removed unnecessary class from modal buttons."
+  292  git push origin stretch-features 
+  293  npx tsc --watch
+  294  git add .
+  295  git commit -m "Improved checkNoEntries for efficiency and error reporting."
+  296  git push origin stretch-features 
+  297  npx tsc --watch
+  298  git add .
+  299  git commit -m "Swapped className for classList.remove() and className.add() in many cases for better flexibility and readability."
+  300  git push origin stretch-features 
+  301  npx tsc --watch
+  302  git add .
+  303  git commit -m "Further dom query improvements."
+  304  npx tsc --watch
+  305  npx tsc --watch
+  306  git add .
+  307  git commit -m "Replaced hidden class lines with functions for better readability."
+  308  git push origin stretch-features 
+  309  npx tsc --watch
+  310  git add .
+  311  git commit -m "Cleaned up loops and changed from while to for for readability."
+  312  git push origin stretch-features 
+  313  npx tsc --watch
+  314  git add .
+  315  git commit -m "Bundled checkNoEntries with viewSwap only."
+  316  npx tsc --watch
+  317  git add .
+  318  git commit -m "Bundled checkNoEntries with viewSwap only."
+  319  git push origin stretch-features 
+  320  npx tsc --watch
+  321  git add .
+  322  git commit -m "Replaced checkNoEntries with one css ruleset."
+  323  git push origin stretch-features 
+  324  npx tsc --watch
+  325  git add .
+  326  git commit -m "Replaced deleteEntry visibility toggles  with one css ruleset."
+  327  git commit --amend -m "Replaced deleteEntry visibility toggles with one css ruleset."
+  328  git push origin stretch-features 
+  329  git pull origin stretch-features 
+  330  npx tsc --watch
+  331  git add .
+  332  git add .
+  333  git commit --amend -m "Replaced all uppercase words with consistent formatting."
+  334  git rebase --quit
+  335  git reset --hard origin/stretch-features 
+  336  git pull origin stretch-features 
+  337  npx tsc --watch
+  338  git add .
+  339  git commit -m "Replaced all uppercase words with consistent formatting."
+  340  git push origin stretch-features 
+  341  npx tsc --watch
+  342  npx tsc --watch
+  343  git add .
+  344  git commit -m "Lots of efficiency, redundancy reduction, and readability changes, reorganized code and made more organized."
+  345  git push origin stretch-features 
+  346  npx tsc --watch
+  347  git add .
+  348  git commit -m "Fixed comment alignment."
+  349  git status
+  350  git status
+  351  git switch main
+  352  git pull origin main
+  353  git switch
+  354  git switch list
+  355  git status
+  356  cd /workspaces
+  357  git clone git@github.com:skylarshaffer/week-planner.git
+  358  cd week-planner
+  359  npm install
+  360  code .
+  361  git pull origin main
+  362  git add .
+  363  git commit -m "skylar-1"
+  364  git push origin main
+  365  git pull origin main
+  366  npx tsc --watch
+  367  npx tsc --watch
+  368  git add .
+  369  git commit -m "skylar-2"
+  370  git push origin main
+  371  git pull origin main
+  372  npx tsc --watch
+  373  npx tsc --watch
+  374  npx tsc --watch
+  375  npx tsc --watch
+  376  git add .
+  377  git commit -m "skylar-3"
+  378  git push origin main
+  379  git pull origin
+  380  npx tsc --watch
+  381  git pull origin main
+  382  git pull origin main
+  383  npx tsc --watch
+  384  npx tsc --watch
+  385  git add .
+  386  git commit -m "skylar-4"
+  387  git push origin main
+  388  npx tsc --watch
+  389  git add .
+  390  git commit -m "skylar-4"
+  391  git push origin main
+  392  git reset --hard origin/main
+  393  git pull origin main
+  394  git status
+  395  npx tsc --watch
+  396  git add .
+  397  git commit -m "skylar-5"
+  398  git push origin main
+  399  git push origin main
+  400  git pull origin main
+  401  npx tsc --watch
+  402  npx tsc --watch
+  403  git add .
+  404  git commit -m "skylar-6"
+  405  git push origin main
+  406  git pull origin main
+  407  git switch main
+  408  git pull origin main
+  409  git switch -c practice-interview-challenge
+  410  cd practice-interview-challenge
+  411  npx tsc --watch
+  412  npx tsc --watch
+  413  cd..
+  414  cd ..
+  415  git add practice-interview-challenge
+  416  git commit -m "Completed practice-interview-challenge."
+  417  git add practice-interview-challenge
+  418  git commit -m "Completed practice-interview-challenge."
+  419  npx tsc --watch
+  420  cd practice-interview-challenge/
+  421  npx tsc --watch
+  422  cd ..
+  423  git add practice-interview-challenge
+  424  git add practice-interview-challenge
+  425  git commit -m "Completed practice-interview-challenge."
+  426  git push origin practice-interview-challenge 
+  427  cd practice-interview-challenge/
+  428  npx tsc --watch
+  429  cd ..
+  430  git add practice-interview-challenge/
+  431  git commit -m "Completed practice-interview-challenge."
+  432  git push origin practice-interview-challenge 
+  433  cd practice-interview-challenge/
+  434  npx tsc -watch
+  435  npx tsc --watch
+  436  cd ..
+  437  git add practice-interview-challenge
+  438  git commit -m "Improved practice-interview-challenge."
+  439  git push origin practice-interview-challenge 
+  440  cd practice-interview-challenge/
+  441  npx tsc --watch
+  442  cd ..
+  443  git add practice-interview-challenge/
+  444  git commit -m "Condensed practice-interview-challenge."
+  445  git push origin practice-interview-challenge 
+  446  git switch main
+  447  git pull origin main
+  448  git switch typescript-timers
+  449  git switch -c typescript-timers
+  450  cd typescript-timers/
+  451  npx tsc --watch
+  452  npx tsc --watch
+  453  cd ..
+  454  git add typescript-timers
+  455  git add typescript-timers
+  456  git commit -m "Completed typescript-timers exercise."
+  457  git push origin typescript-timers 
+  458  git switch main
+  459  git pull origin main
+  460  git switch -c typescript-carousel
+  461  cd typescript-carousel/
+  462  npx tsc --watch
+  463  npx tsc --watch
+  464  cd ..
+  465  git add typescript-carousel
+  466  git commit -m "Completed typescript-carousel challenge."
+  467  git add typescript-carousel
+  468  git commit -m "Completed typescript-carousel challenge."
+  469  git push origin typescript-carousel 
+  470  git switch main
+  471  git pull origin main
+  472  git switch -c typescript-destructuring
+  473  cd typescript-destructuring
+  474  npx tsc --watch
+  475  npx tsc --watch
+  476  cd ..
+  477  git add typescript-destructuring
+  478  git commit -m "Completed typescript-destructuring exercise."
+  479  git push origin typescript-destructuring 
+  480  git switch main
+  481  git pull origin main
+  482  git swich typescript-carousel
+  483  git switch typescript-carousel
+  484  cd typescript-carousel/
+  485  npx tsc --watch
+  486  cd ..
+  487  git add typescript-carousel
+  488  git commit -m "Improved typescript-carousel challenge."
+  489  git push origin typescript-carousel 
+  490  git switch main
+  491  git switch typescript-destructuring 
+  492  git add typescript-destructuring
+  493  git commit -m "Corrected typescript-destructuring quiz."
+  494  git push typescript-destructuring
+  495  git push origin typescript-destructuring
+  496  git switch main
+  497  git pull origin main
+  498  git switch -c typescript-operators
+  499  git switch main
+  500  git pull origin main
+  501  cd command-line-basics/
+  502  git switch -c command-line-basics
+  503  man man
+  504  man cat
+  505  cat -a laziness.txt 
+  506  man cat
+  507  cat -A laziness.txt 
+  508  cat -A impatience.txt 
+  509  cat -A hubris.txt 
+  510  cat laziness.txt impatience.txt hubris.txt
+  511  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  512  cat -A three-virtues.txt 
+  513  man ls
+  514  man ls
+  515  ls
+  516  ls -a
+  517  ls -F
+  518  ls lfz-staff/
+  519  ls -a lfz-staff/
+  520  ls -F lfz-staff/
+  521  ls -r lfz-staff/
+  522  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  523  cat lfz-staff/contents.txt 
+  524  man pwd
+  525  pwd
+  526  pwd > i-was-here.txt
+  527  ls
+  528  cat i-was-here.txt 
+  529  man echo
+  530  echo 'Hello, World!'
+  531  echo 'Hello, World!' > hello.txt
+  532  ls
+  533  cat hello.txt 
+  534  man touch
+  535  touch tag-youre-it.txt
+  536  ls
+  537  touch snoot/boop.txt
+  538  ls
+  539  ls -aF snoot
+  540  mkdir parent
+  541  ls
+  542  man mkdir
+  543  mkdir -p parent\child\grandchild
+  544  touch parent/child/granchild/.gitkeep
+  545  touch parent\child\granchild\.gitkeep
+  546  ls -a 
+  547  ls -a parent\child\grandchild
+  548  mkdir -p  parent/child/grandchild
+  549  rmdir
+  550  rmdir parentchildgrandchild
+  551  touch parent/child/granchild/.gitkeep
+  552  touch parent/child/grandchild/.gitkeep
+  553  ls -a parent/child/grandchild/
+  554  mv pokiemans/ pokemon/
+  555  ls
+  556  rm lol.txt 
+  557  ls
+  558  rm -r kill-me/
+  559  ls
+  560  man cp
+  561  cp and-then.txt no-and-then.txt
+  562  ls
+  563  cat and-then.txt 
+  564  cat no-and-then.txt 
+  565  man history
+  566  history
+  567  history > command-history.txt
