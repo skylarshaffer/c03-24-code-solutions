@@ -6,11 +6,11 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What are the `async` and `await` keywords used for?
 
-  > `async` is used to declare an asynchronous function. `await` is used to call and asynchronous function.
+  > `async` is used to declare an asynchronous function. `await` is used to call an asynchronous function and wait for completion to proceed.
 
 - How do `async` and `await` differ from `Promise.then` and `Promise.catch`?
 
-  > `async` and `await` allow for using `try` and `catch`.
+  > `async` and `await` allow for using `try` and `catch`. They are easier to work with and are more readable.
 
 - When do you use `async`?
 
@@ -30,7 +30,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What happens if you forget to use `await` on a Promise? In that case, what happens to the Promise rejection?
 
-  > If you forget to use `await` on a Promise, the called asynchronous function will fail at the first delay.
+  > If you forget to use `await` on a Promise, the Promise will not return as intended.
 
 - Which style of asynchronous programming do you prefer — callbacks, `Promise.then`, or `async/await`? Why?
 
