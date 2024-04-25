@@ -27,7 +27,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - How do you handle the rejection of a Promise?
 
-  > You handle the fulfillment of a Promise with the .catch() method.
+  > You handle the rejection of a Promise with the .catch() method.
 
 ## Notes
 
