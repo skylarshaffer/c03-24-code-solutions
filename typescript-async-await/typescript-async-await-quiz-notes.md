@@ -11,14 +11,15 @@ Answer the following questions in the provided markdown file before turning in t
 - How do `async` and `await` differ from `Promise.then` and `Promise.catch`?
 
   > `async` and `await` allow for using `try` and `catch`. They are easier to work with and are more readable.
+  > `Promise.then` becomes `await` > `Promise.catch` becomes `try/catch`
 
 - When do you use `async`?
 
-  > You use `async` to declare an asynchronous function.
+  > You use `async` to declare an asynchronous function (a function that will use await).
 
 - When do you use `await`? When do you _not_ use `await`? (What happens if you `await` a synchronous function?)
 
-  > You use `await` when calling an asynchronous function. You don't use `await` when you are calling a synchronous function, as there is no promise to return, and `await` will be waiting on what looks like a 'forever pending' function.
+  > You use `await` when calling an asynchronous function. You don't use `await` when you are calling a synchronous function, as it has no effect and therefore is unnecessary.
 
 - How do you handle errors with `await`?
 
@@ -30,7 +31,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What happens if you forget to use `await` on a Promise? In that case, what happens to the Promise rejection?
 
-  > If you forget to use `await` on a Promise, the Promise will not return as intended.
+  > If you forget to use `await` on a Promise, the Promise will run but will be returned at the moment called as `pending`, and the catch would not be executed on error.
 
 - Which style of asynchronous programming do you prefer — callbacks, `Promise.then`, or `async/await`? Why?
 
