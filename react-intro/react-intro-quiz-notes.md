@@ -20,6 +20,8 @@ Answer the following questions in the provided markdown file before turning in t
 
   > Node.js, QT
 
+  CORRECTION: Angular
+
 ## Notes
 
 All student notes should be written here.
