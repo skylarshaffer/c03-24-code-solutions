@@ -6,11 +6,11 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is JSX?
 
-  >
+  > JSX is a JavaScript extension. It greatly simplifies and accelerates development involving the DOM.
 
 - How does React use JSX to render components?
 
-  >
+  > React reads the JSX file and compiles it to JS code, intelligently using the createElement function in JavaScript.
 
 ## Notes
 
