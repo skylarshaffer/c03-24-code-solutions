@@ -1,8 +1,8 @@
+import './ImageContainer.css';
+
 type Props = {
   imgSrc: string;
 };
-
-import './ImageContainer.css';
 
 export function ImageContainer({ imgSrc }: Props) {
   return (
