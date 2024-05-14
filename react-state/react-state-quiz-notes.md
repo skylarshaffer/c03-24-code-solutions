@@ -10,9 +10,14 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What are the "Rules of Hooks"? (if necessary, re-read the "Pitfall" box in [State](https://react.dev/learn/state-a-components-memory))
 
-  > - Function name must start with `use`.
+  > - Function name must start with `use`. f
   > - Hooks can only be called by React `Components` and `Hooks`.
   > - Hooks in a component must always be called at the top level of the component and in the same order.
+
+  > CORRECTION:
+  >
+  > - Function name must start with use followed by a capital letter.
+  > - Hooks in a component must always be called at the top level of the component and in the same order (AKA not conditionally).
 
 - What is the purpose of state in React?
 
@@ -20,18 +25,26 @@ Answer the following questions in the provided markdown file before turning in t
 
 - Why can't we just maintain state in a local variable?
 
-  > Local variables will not persists across function calls.
+  > Local variables will not persist across function calls.
 
 - What two actions happen when you call a `state setter` function?
 
-  > When you call a `state setter` function, it creates:
+  > When you call a `state setter` function, it returns an array:
   >
   > 1. The state variable
   > 2. The function used to update the value of the state variable
+  >
+  > CORRECTION:
+  >
+  > 1. Schedules a rerender
+  > 2. Updates the cache
 
 - When does the local `state variable` get updated with the new value?
 
   > The local `state variable` gets updated with the new value after the `state setter` function, and before the render.
+  >
+  > CORRECTION:
+  > During the next re-render
 
 EXTRA:
 
