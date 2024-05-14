@@ -24,6 +24,9 @@ Answer the following questions in the provided markdown file before turning in t
 
   > Within curly braces
 
+  > CORRECTION:
+  > WIthin the curly braces in the JSX
+
 ## Notes
 
 All student notes should be written here.
