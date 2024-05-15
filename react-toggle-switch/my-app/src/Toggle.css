@@ -22,8 +22,8 @@
   span {
     background-color: white;
     position: absolute;
-    height: calc((100vh + 100vw) / 16);
-    width: calc((100vh + 100vw) / 16);
+    height: calc(var(--magic-number) / 2);
+    width: calc(var(--magic-number) / 2);
     border-radius: 50%;
     border: 0;
     outline: 5px solid black;
