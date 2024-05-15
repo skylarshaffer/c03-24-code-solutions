@@ -1,0 +1,36 @@
+:root {
+  --magic-number: calc((100vh + 100vw) / 8);
+}
+
+.toggle {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  height: calc(var(--magic-number) / 2);
+  width: var(--magic-number);
+  outline: 5px solid black;
+  border: 0;
+  border-radius: var(--magic-number);
+  justify-content: left;
+
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+  span {
+    background-color: white;
+    position: absolute;
+    height: calc((100vh + 100vw) / 16);
+    width: calc((100vh + 100vw) / 16);
+    border-radius: 50%;
+    border: 0;
+    outline: 5px solid black;
+  }
+}
+
+.toggle.on {
+  justify-content: right;
+  background-color: #6aa84f;
+}
