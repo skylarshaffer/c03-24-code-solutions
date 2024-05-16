@@ -8,7 +8,9 @@ type Props = {
 };
 
 export function PokemonList({ pokedex }: Props) {
-  const listItems = pokedex.map((pokemon) => <li>{pokemon.name}</li>);
+  const listItems = pokedex.map((pokemon) => (
+    <li key={pokemon.number}>{pokemon.name}</li>
+  ));
 
   return <ul>{listItems}</ul>;
 }
