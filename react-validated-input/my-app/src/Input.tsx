@@ -1,9 +1,29 @@
 export function Input() {
   function handleInvalid(event: React.InvalidEvent<HTMLInputElement>) {
-    if (!event.target.value) {
-      event.target.setCustomValidity('A password is required.');
-    } else {
-      event.target.setCustomValidity('Your password is too short.');
+    switch (true) {
+      case !event.target.value:
+        event.target.setCustomValidity('A password is required.');
+        break;
+      case !/[A-Z]/.test(event.target.value):
+        event.target.setCustomValidity(
+          'Your password does not contain a capital letter.'
+        );
+        break;
+      case !/[0-9]/.test(event.target.value):
+        event.target.setCustomValidity(
+          'Your password does not contain a number.'
+        );
+        break;
+      case !/[!@#$%^&*()]/.test(event.target.value):
+        event.target.setCustomValidity(
+          'Your password does not contain a special character (!, @, #, $, %, ^, &, (, ), or *).'
+        );
+        break;
+      case event.target.value.length < 8:
+        event.target.setCustomValidity(
+          'Your password is too short (at least 8 characters).'
+        );
+        break;
     }
   }
 
@@ -14,12 +34,16 @@ export function Input() {
   }
 
   return (
-    <input
-      required
-      type="password"
-      pattern="^.{8,}$"
-      onInvalid={handleInvalid}
-      onChange={handleInput}
-    />
+    <>
+      <label htmlFor="input">Password</label>
+      <input
+        required
+        id="password"
+        type="password"
+        pattern="^.{8,}$"
+        onInvalid={handleInvalid}
+        onChange={handleInput}
+      />
+    </>
   );
 }
