@@ -6,15 +6,17 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What are the phases in the React design process?
 
-  >
+  > 1. Identify Components
+  > 2. Identify State
+  > 3. Identify Events
 
 - How does data flow in React?
 
-  >
+  > Data flows from the parent component to the child component in React.
 
 - How can children components modify state in their parents?
 
-  >
+  > Children can modify state in their parents by referencing functions defined in the parent.
 
 ## Notes
 

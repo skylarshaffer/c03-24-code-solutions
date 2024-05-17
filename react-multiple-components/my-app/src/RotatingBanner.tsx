@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Banner } from './Banner';
 import { Prev } from './Prev';
 import { Numbers } from './Numbers';
@@ -9,13 +9,31 @@ type Props = {
 };
 
 export function RotatingBanner({ items }: Props) {
-  const [current] = useState(3);
+  const [current, setCurrent] = useState(0);
+
+  function handleNumberClick(event: React.MouseEvent<HTMLButtonElement>) {
+    const eventTarget = event.target as HTMLButtonElement;
+    setCurrent(Number(eventTarget.id));
+  }
+
   return (
     <div className="container rotating-banner">
       <Banner current={current} items={items} />
-      <Prev />
-      <Numbers current={current} />
-      <Next />
+      <Prev
+        onPrevClick={() => {
+          setCurrent((current + 5) % 6);
+        }}
+      />
+      <Numbers
+        current={current}
+        onNumberClick={handleNumberClick}
+        items={items}
+      />
+      <Next
+        onNextClick={() => {
+          setCurrent((current + 7) % 6);
+        }}
+      />
     </div>
   );
 }

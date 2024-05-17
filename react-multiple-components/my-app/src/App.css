@@ -27,4 +27,9 @@
       margin: 0 0.25rem;
     }
   }
+
+  button.active {
+    background-color: #9ad7f3;
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 }
