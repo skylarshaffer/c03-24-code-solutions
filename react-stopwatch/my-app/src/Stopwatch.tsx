@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { FaPlay } from 'react-icons/fa';
-import { FaPause } from 'react-icons/fa';
+import { FaPlay, FaPause } from 'react-icons/fa';
 
 export function Stopwatch() {
   const [count, setCount] = useState(0);
@@ -22,6 +21,7 @@ export function Stopwatch() {
   return (
     <div className="container">
       <div
+        style={{ cursor: intervalId ? '' : 'pointer' }}
         className="stopwatch"
         onClick={() => {
           intervalId || setCount(0);
