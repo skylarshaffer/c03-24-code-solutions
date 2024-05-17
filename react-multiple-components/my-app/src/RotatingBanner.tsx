@@ -11,7 +11,7 @@ type Props = {
 export function RotatingBanner({ items }: Props) {
   const [current] = useState(3);
   return (
-    <div className="container">
+    <div className="container rotating-banner">
       <Banner current={current} items={items} />
       <Prev />
       <Numbers current={current} />
