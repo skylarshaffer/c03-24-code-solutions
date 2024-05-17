@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  --magic-number: calc((100vh + 100vw) / 8);
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+div.stopwatch {
+  background-color: white;
+  display: flex;
+  position: relative;
+  height: calc(var(--magic-number));
+  width: calc(var(--magic-number));
+  border-radius: 50%;
+  border: 0;
+  border: 5px solid black;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+span {
+  font-size: 6rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+svg {
+  color: black;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  padding: 1rem;
+}
