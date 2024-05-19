@@ -1,0 +1,21 @@
+#searchable-list {
+  border: 2px solid black;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+}
+
+ul {
+  text-align: left;
+}
+
+input {
+  background: url('./search-solid.svg') top left no-repeat;
+  padding-left: 1.5rem;
+  margin: auto 0.75rem;
+  width: 50%;
+}
