@@ -1,0 +1,25 @@
+#searchable-list {
+  border: 2px solid black;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+  min-width: 60vw;
+  min-height: 30vw;
+  align-content: flex-start;
+}
+
+ul {
+  text-align: left;
+}
+
+input {
+  background: url('./search-solid.svg') top left no-repeat;
+  padding-left: 1.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  max-width: 50%;
+}
