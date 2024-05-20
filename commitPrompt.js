@@ -14,6 +14,9 @@ const rl = readline.createInterface({
 const branchName = exec('git rev-parse --abbrev-ref HEAD');
 
 rl.question('Commit message?', (ip) => {
+  setTimeout(function () {
+    console.log(`Commit message: ${ip} and branch name: ${branchName}`);
+  }, 2000);
   console.log(`Commit message: ${ip} and branch name: ${branchName}`);
   exec(`cd /workspaces/c03-24-code-solutions`);
   rl.close();

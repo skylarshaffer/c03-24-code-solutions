@@ -16,9 +16,9 @@ export function List() {
     async function work() {
       try {
         setItems(await readItems());
-        setIsLoading(false);
       } catch {
         setError(true);
+      } finally {
         setIsLoading(false);
       }
     }
