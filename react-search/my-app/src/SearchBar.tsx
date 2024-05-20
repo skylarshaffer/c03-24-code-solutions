@@ -1,12 +1,7 @@
 type Props = {
-  onSearchInput: (value: string) => void;
+  onSearchInput: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export function SearchBar({ onSearchInput }: Props) {
-  return (
-    <input
-      type="search"
-      onChange={(event) => onSearchInput(event.target.value)}
-    />
-  );
+  return <input type="search" onChange={onSearchInput} />;
 }
