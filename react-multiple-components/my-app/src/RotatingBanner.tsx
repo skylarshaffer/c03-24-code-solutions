@@ -21,7 +21,7 @@ export function RotatingBanner({ items }: Props) {
       <Banner current={current} items={items} />
       <Prev
         onPrevClick={() => {
-          setCurrent((items.length - 1 + current) % items.length);
+          setCurrent((current + (items.length - 1)) % items.length);
         }}
       />
       <Numbers
@@ -31,7 +31,7 @@ export function RotatingBanner({ items }: Props) {
       />
       <Next
         onNextClick={() => {
-          setCurrent((items.length + 1 + current) % items.length);
+          setCurrent((current + (items.length + 1)) % items.length);
         }}
       />
     </div>
