@@ -1,6 +1,6 @@
 import { Topic } from './Topic';
 import './Accordion.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 type Topic = {
   id: number;
@@ -14,10 +14,10 @@ type Props = {
 
 export function Accordion({ topics }: Props) {
   const [activeDiv, setActiveDiv] = useState(0);
-  function handleDivClick(event: React.MouseEvent<HTMLHeadingElement>) {
-    if (activeDiv === Number(event.currentTarget.id)) {
+  function handleDivClick(value: string) {
+    if (activeDiv === Number(value)) {
       setActiveDiv(0);
-    } else setActiveDiv(Number(event.currentTarget.id));
+    } else setActiveDiv(Number(value));
   }
   const topicsList = topics.map((topic) => (
     <Topic
