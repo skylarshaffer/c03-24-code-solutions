@@ -17,8 +17,8 @@ export function Accordion({ topics }: Props) {
   const topicsList = topics.map((topic) => (
     <Topic
       key={topic.id}
-      onDivClick={(value: number) => {
-        activeDiv === value ? setActiveDiv(0) : setActiveDiv(value);
+      onHeadingClick={(id: number) => {
+        activeDiv === id ? setActiveDiv(0) : setActiveDiv(id);
       }}
       topic={topic}
       hidden={topic.id === activeDiv}

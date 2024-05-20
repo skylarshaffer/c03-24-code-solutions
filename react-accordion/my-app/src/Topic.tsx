@@ -7,16 +7,18 @@ type Topic = {
 type Props = {
   topic: Topic;
   hidden: boolean;
-  onDivClick: (value: number) => void;
+  onHeadingClick: (id: number) => void;
 };
 
-export function Topic({ topic, hidden, onDivClick }: Props) {
+export function Topic({ topic, hidden, onHeadingClick }: Props) {
   return (
-    <div
-      onClick={() => {
-        onDivClick(Number(topic.id));
-      }}>
-      <h2>{topic.title}</h2>
+    <div>
+      <h2
+        onClick={() => {
+          onHeadingClick(Number(topic.id));
+        }}>
+        {topic.title}
+      </h2>
       <p style={{ display: hidden ? '' : 'none' }}>{topic.content}</p>
     </div>
   );
