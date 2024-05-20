@@ -11,14 +11,17 @@ Answer the following questions in the provided markdown file before turning in t
 - What is a React Effect?
 
   > A React Effect lets you use state and other React features without writing a class.
+  >
+  > CORRECTION:
+  > A React Effect lets make asynchronous calls and allows you to interact with things outside of React.
 
 - When should you use an Effect and when should you not use an Effect?
 
-  > You should use an Effect when attempting to run asynchronous functions.
+  > You should use an Effect when attempting to run asynchronous functions. You shouldn't use Effect when you don't need to.
 
 - When do Effects run?
 
-  > Effects run after render.
+  > Effects run after the first render and if the dependency array changes.
 
 - What function is used to declare an Effect?
 
@@ -31,14 +34,21 @@ Answer the following questions in the provided markdown file before turning in t
 - Why would you want to clean up from an Effect?
 
   > You want to clean up from an Effect to improve efficiency and reduce unnecessary clutter in your code.
+  >
+  > CORRECTION:
+  >
+  > - To avoid memory leaks
 
 - How do you clean up from an Effect?
 
-  > You clean up from an effect by removing unnecessary dependencies.
+  > You clean up from an effect by defining and calling a cleanup function inside of useEffect().
 
 - When does the cleanup function run?
 
-  > The cleanup function runs after the first render?
+  > The cleanup function when called by useEffect().
+  >
+  > CORRECTION:
+  > Before the component unmounts.
 
 ## Notes
 
