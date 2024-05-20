@@ -7,15 +7,14 @@ type Topic = {
 type Props = {
   topic: Topic;
   hidden: boolean;
-  onDivClick: (value: string) => void;
+  onDivClick: (value: number) => void;
 };
 
 export function Topic({ topic, hidden, onDivClick }: Props) {
   return (
     <div
-      id={topic.id.toString()}
-      onClick={(event: React.MouseEvent<HTMLHeadingElement>) => {
-        onDivClick(event.currentTarget.id);
+      onClick={() => {
+        onDivClick(Number(topic.id));
       }}>
       <h2>{topic.title}</h2>
       <p style={{ display: hidden ? '' : 'none' }}>{topic.content}</p>

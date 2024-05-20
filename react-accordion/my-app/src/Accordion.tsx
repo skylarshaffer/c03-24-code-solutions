@@ -14,15 +14,12 @@ type Props = {
 
 export function Accordion({ topics }: Props) {
   const [activeDiv, setActiveDiv] = useState(0);
-  function handleDivClick(value: string) {
-    if (activeDiv === Number(value)) {
-      setActiveDiv(0);
-    } else setActiveDiv(Number(value));
-  }
   const topicsList = topics.map((topic) => (
     <Topic
       key={topic.id}
-      onDivClick={handleDivClick}
+      onDivClick={(value: number) => {
+        activeDiv === value ? setActiveDiv(0) : setActiveDiv(value);
+      }}
       topic={topic}
       hidden={topic.id === activeDiv}
     />
