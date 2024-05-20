@@ -1,7 +1,7 @@
 import { SearchBar } from './SearchBar';
 import { QuotesList } from './QuotesList';
 import './SearchableList.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 type Props = {
   quotes: string[];
@@ -9,9 +9,8 @@ type Props = {
 
 export function SearchableList({ quotes }: Props) {
   const [searchString, setSearchString] = useState('');
-  function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
-    const eventTarget = event.target as HTMLInputElement;
-    setSearchString(eventTarget.value);
+  function handleSearch(value: string) {
+    setSearchString(value);
   }
 
   return (
