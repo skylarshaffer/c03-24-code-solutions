@@ -7,6 +7,9 @@
   padding: 1rem;
   font-size: 1rem;
   color: black;
+  min-width: 60vw;
+  min-height: 30vw;
+  align-content: flex-start;
 }
 
 ul {
@@ -16,6 +19,7 @@ ul {
 input {
   background: url('./search-solid.svg') top left no-repeat;
   padding-left: 1.5rem;
-  margin: auto 0.75rem;
-  width: 50%;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  max-width: 50%;
 }
