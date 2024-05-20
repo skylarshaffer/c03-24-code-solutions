@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container.rotating-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    margin: 0.5rem;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+
+    > * {
+      margin: 0 0.25rem;
+    }
+  }
+
+  button.active {
+    background-color: #9ad7f3;
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
