@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { type Item, readItem } from '../lib/read';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 export function Details() {
   const { itemId } = useParams();
   const [item, setItem] = useState<Item>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function loadItem(itemId: number) {
@@ -57,6 +58,13 @@ export function Details() {
           </div>
         </div>
       </div>
+      <button
+        onClick={() => {
+          alert('Save was clicked');
+          navigate('/');
+        }}>
+        Save
+      </button>
     </div>
   );
 }
