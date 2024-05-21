@@ -5,5 +5,7 @@ type Props = {
 };
 
 export function RightArrow({ onRightArrowClick }: Props) {
-  return <FaAngleRight onClick={onRightArrowClick} />;
+  return (
+    <FaAngleRight className="arrow right-arrow" onClick={onRightArrowClick} />
+  );
 }

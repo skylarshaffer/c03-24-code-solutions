@@ -77,24 +77,28 @@ img {
   width: auto;
 }
 
-i:hover {
+.center-both {
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  color: black;
+}
+
+svg:hover {
   cursor: pointer;
+}
+
+svg.arrow {
+  height: 2rem;
+}
+
+.circle {
+  margin: 0 0.25rem;
+  margin-bottom: auto;
 }
 
 #carousel-circles {
   height: 40px;
-
-  i {
-    margin: 0 0.25rem;
-    margin-bottom: auto;
-  }
-}
-
-.arrow {
-  font-size: 2rem;
-}
-
-.center-both {
-  align-items: center;
-  justify-content: center;
 }

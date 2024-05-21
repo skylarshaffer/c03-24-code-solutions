@@ -9,6 +9,7 @@ type Props = {
 export function Circle({ imageId, current, onCircleClick }: Props) {
   const circle = current ? (
     <FaRegCircle
+      className="circle circle-selected"
       key={imageId}
       onClick={() => {
         onCircleClick(imageId);
@@ -16,6 +17,7 @@ export function Circle({ imageId, current, onCircleClick }: Props) {
     />
   ) : (
     <FaCircle
+      className="circle"
       key={imageId}
       onClick={() => {
         onCircleClick(imageId);
