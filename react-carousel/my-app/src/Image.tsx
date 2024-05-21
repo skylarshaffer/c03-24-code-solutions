@@ -10,5 +10,12 @@ type Props = {
 };
 
 export function Image({ image, show }: Props) {
-  return show ? <img src={image.src} key={image.id} alt={image.alt} /> : '';
+  return (
+    <img
+      src={image.src}
+      key={image.id}
+      alt={image.alt}
+      style={{ display: show ? '' : 'none' }}
+    />
+  );
 }
