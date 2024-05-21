@@ -60,7 +60,7 @@ export function Details() {
       </div>
       <button
         onClick={() => {
-          alert('Save was clicked');
+          alert(`Saved ${item.name}`);
           navigate('/');
         }}>
         Save
