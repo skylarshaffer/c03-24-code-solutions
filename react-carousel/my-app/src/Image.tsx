@@ -6,16 +6,9 @@ type Image = {
 
 type Props = {
   image: Image;
-  hidden: boolean;
+  show: boolean;
 };
 
-export function Image({ image, hidden }: Props) {
-  return (
-    <img
-      src={image.src}
-      key={image.id}
-      style={{ display: hidden ? '' : 'none' }}
-      alt={image.alt}
-    />
-  );
+export function Image({ image, show }: Props) {
+  return show ? <img src={image.src} key={image.id} alt={image.alt} /> : '';
 }

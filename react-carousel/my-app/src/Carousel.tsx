@@ -58,7 +58,7 @@ export function Carousel({ images }: Props) {
     />
   ));
   const imagesList = images.map((image) => (
-    <Image key={image.id} image={image} hidden={image.id === activeImageId} />
+    <Image key={image.id} image={image} show={image.id === activeImageId} />
   ));
   return (
     <main className="container">
