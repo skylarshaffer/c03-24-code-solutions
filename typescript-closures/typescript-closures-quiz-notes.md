@@ -14,19 +14,19 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What values does a closure contain?
 
-  > Variables
+  > Variables within scope but defined outside of the function.
 
 - When is a closure created?
 
-  > A closure is created upon the creation of a function that initializes at least one variable.
+  > A closure is created at runtime upon the creation of a function.
 
 - How can you tell if a function will be created with a closure?
 
-  > You can tell if a function will be created with a closure if the function initializes any variables.
+  > Technically, a closure is created upon every function definition. However, it is more useful to understand that a function will be created with a closure if the function references any variables defined outside the function.
 
 - In React, what is one important case where you need to know if a closure was created?
 
-  > In React, you need to know if a closure was created when working with API requests.
+  > In React, you need to know if a closure was created when working with dependency arrays.
 
 ## Notes
 
