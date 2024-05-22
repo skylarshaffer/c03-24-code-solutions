@@ -58,15 +58,19 @@ function ProductCard({ product }: CardProps) {
     <Link
       to={'details/' + product.productId}
       className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4">
+      <img
+        src={product.imageUrl}
+        alt={product.name}
+        className="w-full h-80 object-contain"
+      />
       <div className="flex-auto p-6">
-        <img
-          src={product.imageUrl}
-          alt={product.name}
-          className="w-full h-80 object-contain"
-        />
-        <h5 className="font-bold mb-3">{product.name}</h5>
-        <h5 className="font-bold mb-3">{toDollars(product.price)}</h5>
-        <h5 className="font-bold mb-3">{product.shortDescription}</h5>
+        <h5 className="text-gray-900 text-lg font-semibold mb-3">
+          {product.name}
+        </h5>
+        <h6 className="text-gray-500  mb-3">{toDollars(product.price)}</h6>
+        <p className="text-gray-900 font-normal mb-3">
+          {product.shortDescription}
+        </p>
       </div>
     </Link>
   );
