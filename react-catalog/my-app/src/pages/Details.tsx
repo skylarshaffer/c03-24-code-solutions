@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { type Product, readProduct } from '../lib';
+import { type Product, readProduct, toDollars } from '../lib';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
 export function Details() {
@@ -35,13 +35,13 @@ export function Details() {
       </div>
     );
   }
-  const { name, imageUrl, shortDescription } = product;
+  const { name, imageUrl, longDescription, shortDescription, price } = product;
   return (
     <div className="container">
       <div className="flex flex-col">
         <div className="flex-auto p-6">
           <Link to="/" className="p-3 text-gray-600 cursor-pointer">
-            &lt; Back to Dashboard
+            &lt; Back to Catalog
           </Link>
           <div className="flex flex-wrap mb-4">
             <div className="w-full sm:w-1/2 md:w-2/5 pt-2 px-4">
@@ -51,19 +51,23 @@ export function Details() {
                 className="w-full h-80 object-contain"
               />
             </div>
-            <h2 className="w-full sm:w-1/2 md:w-3/5 px-4 font-bold">{name}</h2>
+            <div className="w-full sm:w-1/2 md:w-3/5">
+              <h2 className="px-4 font-bold">{name}</h2>
+              <h3 className="px-4 font-bold">{toDollars(price)}</h3>
+              <p>{shortDescription}</p>
+            </div>
           </div>
           <div className="px-4">
-            <p className="whitespace-pre-wrap">{shortDescription}</p>
+            <p className="whitespace-pre-wrap">{longDescription}</p>
           </div>
         </div>
       </div>
       <button
         onClick={() => {
-          alert(`Saved ${product.name}`);
+          alert(`Added ${product.name} to cart`);
           navigate('/');
         }}>
-        Save
+        Add to Cart
       </button>
     </div>
   );

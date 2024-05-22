@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Product, readCatalog } from '../lib';
+import { Product, readCatalog, toDollars } from '../lib';
 
 export function Catalog() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -59,7 +59,14 @@ function ProductCard({ product }: CardProps) {
       to={'details/' + product.productId}
       className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4">
       <div className="flex-auto p-6">
+        <img
+          src={product.imageUrl}
+          alt={product.name}
+          className="w-full h-80 object-contain"
+        />
         <h5 className="font-bold mb-3">{product.name}</h5>
+        <h5 className="font-bold mb-3">{toDollars(product.price)}</h5>
+        <h5 className="font-bold mb-3">{product.shortDescription}</h5>
       </div>
     </Link>
   );
