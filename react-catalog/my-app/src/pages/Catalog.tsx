@@ -35,7 +35,7 @@ export function Catalog() {
 
   return (
     <div className="container">
-      <h1 className="px-4">Catalog</h1>
+      <h1 className="px-4 mb-5 font-semibold">Catalog</h1>
       <hr className="py-1" />
       <div className="flex flex-wrap">
         {products?.map((product) => (

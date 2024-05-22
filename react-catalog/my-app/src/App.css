@@ -1,7 +1,21 @@
 #root {
+  margin-bottom: auto;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+}
+
+nav ul {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+#root div.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .logo {

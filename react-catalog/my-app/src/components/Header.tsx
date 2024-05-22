@@ -2,7 +2,7 @@ import { Outlet, Link } from 'react-router-dom';
 
 export function Header() {
   return (
-    <div>
+    <>
       <nav className="text-white bg-gray-900">
         <ul className="">
           <li className="inline-block py-2 px-4">
@@ -19,6 +19,6 @@ export function Header() {
       </nav>
       {/* Page content goes here */}
       <Outlet />
-    </div>
+    </>
   );
 }

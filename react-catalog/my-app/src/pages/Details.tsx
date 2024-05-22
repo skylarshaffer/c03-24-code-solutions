@@ -52,7 +52,7 @@ export function Details() {
               />
             </div>
             <div className="w-full sm:w-1/2 md:w-3/5">
-              <h2 className="text-2xl font-semibold mb-2">{name}</h2>
+              <h2 className="text-3xl font-semibold mb-2">{name}</h2>
               <h3 className="font-semibold text-gray-500 mb-2">
                 {toDollars(price)}
               </h3>
