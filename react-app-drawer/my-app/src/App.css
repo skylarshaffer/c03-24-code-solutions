@@ -1,26 +1,112 @@
+#root > div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
 #root {
   margin-bottom: auto;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
 }
 
 nav {
   position: sticky;
-  top: 0;
-  width: 100vw;
+  left: 0;
 }
 
 nav ul {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2em;
+  display: flex;
+  flex-direction: column;
 }
 
-#root div.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2em;
+nav * li {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-drawer:not(.is-open) * span {
+  display: none;
 }
 
 .card {
   padding: 2em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.menu-icon {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.menu-drawer {
+  width: 4rem;
+  min-height: 100vh;
+  padding-top: 1rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.45);
+  transition: width 0.2s ease-in-out;
+}
+
+.menu-drawer.is-open {
+  width: 16rem;
+}
+
+.menu-heading {
+  margin: 1.5rem 0;
+  font-size: large;
+  font-weight: bold;
+}
+
+.menu-items {
+  padding: 0;
+}
+
+.menu-item {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.menu-icon,
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-heading,
+.menu-item {
+  padding-left: 1rem;
+}
+
+.menu-item:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.menu-link,
+.menu-link:hover {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.menu-link.active {
+  background-color: rgb(240, 240, 240);
+}
+
+.item-icon {
+  width: 1.1rem;
+  margin: 0.3rem;
+  display: inline-block;
 }

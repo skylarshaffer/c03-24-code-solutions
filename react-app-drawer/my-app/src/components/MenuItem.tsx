@@ -7,9 +7,10 @@ type Props = {
 
 export function MenuItem({ menuItem }: Props) {
   return (
-    <li key={menuItem.name} className="inline-block py-2 px-4">
-      <Link to={menuItem.path} className="text-white">
-        {menuItem.name}
+    <li key={menuItem.name} className="py-2 px-4 menu-item">
+      <Link to={menuItem.path} className="text-white menu-link">
+        <img className="item-icon" src={menuItem.iconUrl} alt={menuItem.name} />
+        <span>{menuItem.name}</span>
       </Link>
     </li>
   );

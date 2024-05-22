@@ -1,45 +1,47 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { readCatalog, type Product, toDollars } from '../lib';
+import { Product, readCatalog, toDollars } from '../lib';
 
 export function Catalog() {
-  const [products, setProducts] = useState<Product[]>();
+  const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
 
   useEffect(() => {
-    async function load() {
+    async function loadProducts() {
       try {
-        const products = await readCatalog();
-        setProducts(products);
-      } catch (err) {
-        setError(err);
+        const values = await readCatalog();
+        setProducts(values);
+      } catch (error) {
+        setError(error);
       } finally {
         setIsLoading(false);
       }
     }
-    setIsLoading(true);
-    load();
+    loadProducts();
   }, []);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   if (error) {
     return (
       <div>
-        Error Loading Catalog:{' '}
-        {error instanceof Error ? error.message : 'Unknown Error'}
+        Error! {error instanceof Error ? error.message : 'Unknown Error'}
       </div>
     );
   }
+
   return (
     <div className="container">
-      <h1 className="px-4 mb-5`">Catalog</h1>
+      <h1 className="px-4 mb-5 font-semibold">Catalog</h1>
       <hr className="mx-4 py-1" />
       <div className="flex flex-wrap">
         {products?.map((product) => (
           <div
             key={product.productId}
-            className="w-full md:w-1/2 lg:w-1/3 px-4">
+            className="w-full md:w-1/2 lg:w-1/3 pr-4 pl-4">
             <ProductCard product={product} />
           </div>
         ))}
@@ -52,16 +54,23 @@ type CardProps = {
   product: Product;
 };
 function ProductCard({ product }: CardProps) {
-  const { productId, name, price, imageUrl, shortDescription } = product;
   return (
     <Link
-      to={`details/${productId}`}
-      className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4 shadow-sm hover:text-inherit">
-      <img src={imageUrl} className="object-contain h-72 w-full" alt={name} />
+      to={'details/' + product.productId}
+      className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4 shadow-sm">
+      <img
+        src={product.imageUrl}
+        alt={product.name}
+        className="w-full h-80 object-contain"
+      />
       <div className="flex-auto p-6">
-        <h5 className="font-bold mb-3">{name}</h5>
-        <p className="mb-0 text-gray-600">{toDollars(price)}</p>
-        <p className="h-20 mb-0 overflow-hidden">{shortDescription}</p>
+        <h5 className="text-gray-900 text-lg font-semibold mb-3">
+          {product.name}
+        </h5>
+        <h6 className="text-gray-500  mb-3">{toDollars(product.price)}</h6>
+        <p className="text-gray-900 font-normal mb-3">
+          {product.shortDescription}
+        </p>
       </div>
     </Link>
   );
