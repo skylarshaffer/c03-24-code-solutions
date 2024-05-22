@@ -1,25 +1,18 @@
-import { Link, Outlet } from 'react-router-dom';
-
-export type MenuItem = {
-  name: string;
-  iconUrl: string;
-  path: string;
-};
+import { Outlet } from 'react-router-dom';
+import { MenuItem } from './MenuItem';
+import { type MenuItemType } from './Types';
 
 type Props = {
-  menuItems: MenuItem[];
+  menuItems: MenuItemType[];
 };
+
 export function AppDrawer({ menuItems }: Props) {
   return (
     <div className="flex flex-col w-screen">
       <nav className="inline-block py-2 px-4 bg-gray-900">
         <ul>
-          {menuItems.map((menu) => (
-            <li key={menu.name} className="inline-block py-2 px-4">
-              <Link to={menu.path} className="text-white">
-                {menu.name}
-              </Link>
-            </li>
+          {menuItems.map((menuItem) => (
+            <MenuItem menuItem={menuItem} />
           ))}
         </ul>
       </nav>

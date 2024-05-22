@@ -33,8 +33,8 @@ export function Catalog() {
   }
   return (
     <div className="container">
-      <h1>Catalog</h1>
-      <hr className="py-1" />
+      <h1 className="px-4 mb-5`">Catalog</h1>
+      <hr className="mx-4 py-1" />
       <div className="flex flex-wrap">
         {products?.map((product) => (
           <div

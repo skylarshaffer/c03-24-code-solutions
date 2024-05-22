@@ -9,7 +9,6 @@
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-size-adjust: 100%;
 }
 
 a {
@@ -19,12 +18,17 @@ a {
 }
 
 a:hover {
-  color: #535bf2;
+  color: rgb(17 24 39);
+}
+
+nav a:hover {
+  color: rgb(229 231 235);
 }
 
 body {
   margin: 0;
   display: flex;
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -47,7 +51,7 @@ button {
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: rgb(17 24 39);
 }
 
 button:focus,
@@ -62,7 +66,7 @@ button:focus-visible {
   }
 
   a:hover {
-    color: #747bff;
+    color: rgb(17 24 39);
   }
 
   button {

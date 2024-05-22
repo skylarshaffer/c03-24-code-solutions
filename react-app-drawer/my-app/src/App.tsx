@@ -4,6 +4,7 @@ import { Catalog } from './pages/Catalog';
 import { NotFound } from './pages/NotFound';
 import { ProductDetails } from './pages/ProductDetails';
 import { AppDrawer } from './components/AppDrawer';
+import './App.css';
 
 const menuItems = [
   { name: 'About', iconUrl: '/hylian-emblem.svg', path: '/about' },
