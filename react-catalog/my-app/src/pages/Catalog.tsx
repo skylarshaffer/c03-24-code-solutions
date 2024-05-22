@@ -35,7 +35,7 @@ export function Catalog() {
 
   return (
     <div className="container">
-      <h1>Catalog</h1>
+      <h1 className="px-4">Catalog</h1>
       <hr className="py-1" />
       <div className="flex flex-wrap">
         {products?.map((product) => (
@@ -57,7 +57,7 @@ function ProductCard({ product }: CardProps) {
   return (
     <Link
       to={'details/' + product.productId}
-      className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4">
+      className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4 shadow-sm">
       <img
         src={product.imageUrl}
         alt={product.name}

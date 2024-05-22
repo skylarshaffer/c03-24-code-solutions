@@ -39,8 +39,8 @@ export function Details() {
   return (
     <div className="container">
       <div className="flex flex-col">
-        <div className="flex-auto p-6">
-          <Link to="/" className="p-3 text-gray-600 cursor-pointer">
+        <div className="flex-auto p-6 text-gray-900 rounded border border-gray-300 shadow-sm">
+          <Link to="/" className="p-3 text-gray-500 cursor-pointer">
             &lt; Back to Catalog
           </Link>
           <div className="flex flex-wrap mb-4">
@@ -52,8 +52,10 @@ export function Details() {
               />
             </div>
             <div className="w-full sm:w-1/2 md:w-3/5">
-              <h2 className="px-4 font-bold">{name}</h2>
-              <h3 className="px-4 font-bold">{toDollars(price)}</h3>
+              <h2 className="text-2xl font-semibold mb-2">{name}</h2>
+              <h3 className="font-semibold text-gray-500 mb-2">
+                {toDollars(price)}
+              </h3>
               <p>{shortDescription}</p>
             </div>
           </div>

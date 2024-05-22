@@ -3,15 +3,15 @@ import { Outlet, Link } from 'react-router-dom';
 export function Header() {
   return (
     <div>
-      <nav className="px-4 text-white bg-gray-900">
-        <ul>
+      <nav className="text-white bg-gray-900">
+        <ul className="">
           <li className="inline-block py-2 px-4">
-            <Link to="about" className="text-white">
+            <Link to="about" className="text-white font-normal">
               About
             </Link>
           </li>
           <li className="inline-block py-2 px-4">
-            <Link to="/" className="text-white">
+            <Link to="/" className="text-white font-normal">
               Catalog
             </Link>
           </li>
