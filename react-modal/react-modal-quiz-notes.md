@@ -24,7 +24,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - How can you render nested JSX elements in React?
 
-  > You can render nested JSX elements in React by returning them, or by assigning them to a variable and returning that variable.
+  > You can render nested JSX elements in React by assigning them to the "children" prop.
 
 ## Notes
 
