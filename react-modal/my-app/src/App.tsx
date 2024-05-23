@@ -17,13 +17,14 @@ export default function App() {
       </button>
     </>
   );
-  function handleClose() {
-    setIsOpen(false);
-  }
   return (
     <>
       <button onClick={() => setIsOpen(true)}>Delete Me!</button>
-      <Modal isOpen={isOpen} children={children} onClose={handleClose} />
+      <Modal
+        isOpen={isOpen}
+        children={children}
+        onClose={() => setIsOpen(false)}
+      />
     </>
   );
 }
