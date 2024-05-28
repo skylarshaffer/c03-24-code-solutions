@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 
 type Props = {
   children: ReactNode;
-  isOpen: boolean;
+  isOpen?: boolean;
   positionTo: RefObject<HTMLButtonElement>;
   onPopupClick: () => void;
   opacity: number;
@@ -17,8 +17,8 @@ export function Popup({
   onPopupClick,
   opacity,
 }: Props) {
-  const buttonRectangle = positionTo.current?.getBoundingClientRect();
   if (!isOpen) return null;
+  const buttonRectangle = positionTo.current?.getBoundingClientRect();
   return createPortal(
     <div
       onClick={onPopupClick}
