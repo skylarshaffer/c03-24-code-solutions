@@ -14,7 +14,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - Which HTTP method does a browser issue to a web server when you visit a URL?
 
-  > GET
+  > `GET`
 
 - What three things are on the start-line of an HTTP **request** message?
 
