@@ -1,5 +1,6 @@
-select "customers"."firstName", "customers"."lastName"
-  from "films"
-  join "rentals" on "rentals"."rentalId" = "films"."filmId"
-  join "customers" using ("customerId")
-  where "films"."title" = 'Magic Mallrats'
+select "customers"."firstName","customers"."lastName"
+  from "customers"
+  join "rentals" using ("customerId")
+  join "inventory" using ("inventoryId")
+  join "films" using ("filmId")
+  where "title" = 'Magic Mallrats'
