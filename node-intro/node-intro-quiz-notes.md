@@ -16,11 +16,19 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What are environment variables and how do you access them in Node.js?
 
-  > Environment variables are dynamic and static, immutable variables that are dependent on the environment in which Node is run.
+  > Environment variables are dynamic and static, immutable variables that are dependent on the environment in which Node is run. You can access them by name with `access.env.[variableName]`.
 
 - What is a REPL?
 
   > A REPL is a contained environment in which temporary variables defined in the same session can be referenced.
+  >
+  > Read
+  >
+  > Evaluate
+  >
+  > Print
+  >
+  > Loop
 
 ## Notes
 
