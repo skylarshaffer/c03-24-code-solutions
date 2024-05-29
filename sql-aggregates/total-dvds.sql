@@ -1,2 +1,2 @@
 select count(*) as "totalDVDs"
-  from "products";
+  from "inventory";
