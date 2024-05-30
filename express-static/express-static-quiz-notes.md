@@ -21,7 +21,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is a good way to serve application images using Express?
 
-  > Place the images in public and pass the images only when necessary using Express.
+  > Place the images in public and reference their path in a mounted `express.static()` function.
 
 ## Notes
 
