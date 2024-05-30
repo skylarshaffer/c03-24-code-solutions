@@ -10,11 +10,14 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What does `express.static()` return?
 
-  > `express.static()` returns all content of the folder or file it is passed.
+  > `express.static()` returns a middleware function that can be passed to `app.use()`.
 
 - What are several examples of static files?
 
-  > Images, documents, downloads, installers
+  > - .js
+  > - .css
+  > - .html
+  > - Image files, video files, etc.
 
 - What is a good way to serve application images using Express?
 
