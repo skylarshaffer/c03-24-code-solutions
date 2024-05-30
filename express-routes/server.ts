@@ -3,18 +3,20 @@ import express from 'express';
 const app = express();
 
 app.use((req, res, next) => {
-  console.log('Hello, World!');
-  console.log('The date is', new Date(), req.method, req.path);
-  if (req.method === 'GET') {
-    if (req.path === '/') {
-      res.send('just slash');
-    } else if (req.path === '/notes') {
-      res.send('slash notes');
-    }
-  } else if (req.method === 'POST' && req.path === '/notes/123') {
-    res.send('post notes 123');
-  }
+  console.log(new Date(), req.method, req.path);
   next();
+});
+
+app.get('/', (req, res) => {
+  res.send('get slash');
+});
+
+app.get('/notes', (req, res) => {
+  res.send('get slash notes');
+});
+
+app.post('/notes/123', (req, res) => {
+  res.send('post slash notes 123');
 });
 
 app.listen(8080, () => {
