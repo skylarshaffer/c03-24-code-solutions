@@ -18,15 +18,18 @@ Answer the following questions in the provided markdown file before turning in t
 
 - How do you get the rows return from the SQL query?
 
-  > You get the returned rows from the SQL query automatically. You can capture this return by assigning the result of the awaited query to a variable.
+  > You get the returned rows from the SQL query automatically. You can reference this specific property using the `.rows` property of the returned object.
   >
   > ```TS
-  > const return = await db.query(sql, params)
+  > (await db.query(sql, params)).rows
   > ```
 
 - What must you always remember to put around your asynchronous route handlers? Why?
 
   > You must always put the database connection and express application initialization before your asynchronous route handlers so that the routes have the integral objects for their queries. The use method of the application object should follow any specific handlers, and listen should come last.
+  >
+  > CORRECTION:
+  > You must always surround your asynchronous route handlers in `try/catch`.
 
 - What is a SQL Injection Attack and how do you avoid it in `pg`?
 

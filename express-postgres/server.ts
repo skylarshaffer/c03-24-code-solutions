@@ -70,8 +70,8 @@ app.put('/api/film', async (req, res, next) => {
   try {
     const { filmId, title } = req.query;
     const missing = [] as string[];
-    filmId || missing.push('filmId');
-    title || missing.push('title');
+    !filmId === undefined || missing.push('filmId');
+    !title === undefined || missing.push('title');
     if (missing.length) {
       throw new ClientError(400, `${missing.join(',')} is required`);
     }
@@ -87,8 +87,7 @@ app.put('/api/film', async (req, res, next) => {
     if (!film) {
       throw new ClientError(404, `film ${filmId} not found`);
     }
-    res.status(200);
-    res.send();
+    res.send(film);
   } catch (err) {
     next(err);
   }
