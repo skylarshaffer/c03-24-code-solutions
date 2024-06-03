@@ -43,11 +43,8 @@ app.post('/api/actors', async (req, res, next) => {
 app.get('/api/actors/:actorId', async (req, res, next) => {
   try {
     const { actorId } = req.params;
-    if (actorId === undefined) {
-      if (!Number.isInteger(+actorId)) {
-        throw new ClientError(400, `Non-integer actorId: ${actorId}`);
-      }
-      throw new ClientError(400, `actorId is undefined`);
+    if (!Number.isInteger(+actorId)) {
+      throw new ClientError(400, `Non-integer actorId: ${actorId}`);
     }
     const sql = `
       select * from "actors"
@@ -70,11 +67,8 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
     let { firstName, lastName } = req.body;
     firstName === undefined && (firstName = '');
     lastName === undefined && (lastName = '');
-    if (actorId === undefined) {
-      if (!Number.isInteger(+actorId)) {
-        throw new ClientError(400, `Non-integer actorId: ${actorId}`);
-      }
-      throw new ClientError(400, `actorId is undefined`);
+    if (!Number.isInteger(+actorId)) {
+      throw new ClientError(400, `Non-integer actorId: ${actorId}`);
     }
     const sql = `
       update "actors"
@@ -96,11 +90,8 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
 app.delete('/api/actors/:actorId', async (req, res, next) => {
   try {
     const { actorId } = req.params;
-    if (actorId === undefined) {
-      if (!Number.isInteger(+actorId)) {
-        throw new ClientError(400, `Non-integer actorId: ${actorId}`);
-      }
-      throw new ClientError(400, `actorId is undefined`);
+    if (!Number.isInteger(+actorId)) {
+      throw new ClientError(400, `Non-integer actorId: ${actorId}`);
     }
     const sql = `
       delete from "actors"
