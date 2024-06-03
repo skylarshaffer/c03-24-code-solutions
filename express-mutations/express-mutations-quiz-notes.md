@@ -14,7 +14,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What does the express.json() middleware do and when would you need it?
 
-  > The express.json() middleware allows the server to interpret and respond with JSON, and a developer using JSON effectively would need it almost all the time.
+  > The express.json() middleware allows the server to parse JSON in HTTP requests. A developer using JSON effectively would need it when referencing `req.body`.
 
 ## Notes
 
