@@ -91,11 +91,11 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     }
     if (score > 100 || score < 0) {
       if (!Number.isInteger(+score)) {
-        throw new ClientError(400, `Non-integer gradeId: ${gradeId}`);
+        throw new ClientError(400, `Non-integer score: ${score}`);
       }
       throw new ClientError(
         400,
-        `gradeId is not in the range of 1-100: ${gradeId}`
+        `score is not in the range of 1-100: ${score}`
       );
     }
     const sql = `
