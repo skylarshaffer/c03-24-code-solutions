@@ -27,9 +27,6 @@ app.get('/api/films', async (req, res, next) => {
     `;
     const result = await db.query(sql);
     const films = result.rows;
-    if (!films) {
-      throw new ClientError(404, `no films`);
-    }
     res.send(films);
   } catch (err) {
     next(err);
@@ -69,7 +66,7 @@ app.get('/api/film', async (req, res, next) => {
 app.put('/api/film', async (req, res, next) => {
   try {
     const { filmId, title } = req.query;
-    const missing = [] as string[];
+    const missing = [];
     !filmId === undefined || missing.push('filmId');
     !title === undefined || missing.push('title');
     if (missing.length) {
