@@ -18,7 +18,9 @@ export function UserDetails({ userId, onCancel }: Props) {
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/users/${userId}`
         );
-        if (response.ok !== true) setError(true);
+        if (response.ok !== true) {
+          throw new Error('fetch error');
+        }
         setUser(await response.json());
       } catch {
         setError(true);

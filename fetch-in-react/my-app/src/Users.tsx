@@ -24,7 +24,9 @@ export function Users() {
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/users`
         );
-        if (response.ok !== true) setError(true);
+        if (response.ok !== true) {
+          throw new Error('fetch error');
+        }
         setUsers(await response.json());
       } catch {
         setError(true);
