@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars -- Remove me */
-/* eslint-disable @typescript-eslint/no-empty-function -- Remove me */
 import { useEffect, useState } from 'react';
 import { PageTitle } from './PageTitle';
 import { TodoList } from './TodoList';
@@ -24,45 +22,37 @@ export function Todos() {
       try {
         const response = await fetch('/api/todos');
         if (response.ok !== true) {
-          setError(error);
-          throw new Error();
+          throw new Error('fetch error');
         }
         setTodos(await response.json());
-      } catch {
-        setError(error);
-        throw new Error();
+      } catch (err) {
+        setError(err);
       } finally {
         setIsLoading(false);
       }
     }
     getTodos();
-  }, [error]);
+  }, []);
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo) {
     try {
-      const body = {
-        task: newTodo.task,
-        isCompleted: newTodo.isCompleted,
-      };
       const response = await fetch('/api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(body),
+        body: JSON.stringify(newTodo),
       });
       if (response.ok !== true) {
-        setError(error);
-        throw new Error();
+        throw new Error('fetch error');
       }
       if (response.ok !== true) setError(true);
       const responseJson = response.json() as unknown as Todo;
       const newTodos = [...todos, responseJson];
       setTodos(newTodos);
-    } catch {
-      setError(error);
-      throw new Error();
+    } catch (err) {
+      setError(err);
     }
   }
 
@@ -78,17 +68,15 @@ export function Todos() {
         body: JSON.stringify(body),
       });
       if (response.ok !== true) {
-        setError(error);
-        throw new Error();
+        throw new Error('fetch error');
       }
       const responseJson = response.json() as unknown as Todo;
       const newTodos = todos.map((oldTodo) =>
         oldTodo.todoId === todo.todoId ? responseJson : oldTodo
       );
       setTodos(newTodos);
-    } catch {
-      setError(error);
-      throw new Error();
+    } catch (err) {
+      setError(err);
     }
   }
 
