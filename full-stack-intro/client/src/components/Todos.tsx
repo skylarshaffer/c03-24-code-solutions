@@ -36,7 +36,7 @@ export function Todos() {
       }
     }
     getTodos();
-  }, [error, isLoading]);
+  }, [error]);
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo) {
@@ -56,14 +56,13 @@ export function Todos() {
         setError(error);
         throw new Error();
       }
+      if (response.ok !== true) setError(true);
       const responseJson = response.json() as unknown as Todo;
       const newTodos = [...todos, responseJson];
       setTodos(newTodos);
     } catch {
       setError(error);
       throw new Error();
-    } finally {
-      setIsLoading(false);
     }
   }
 
@@ -93,8 +92,6 @@ export function Todos() {
     } catch {
       setError(error);
       throw new Error();
-    } finally {
-      setIsLoading(false);
     }
   }
 
