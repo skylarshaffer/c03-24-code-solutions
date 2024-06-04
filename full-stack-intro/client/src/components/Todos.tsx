@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars -- Remove me */
 /* eslint-disable @typescript-eslint/no-empty-function -- Remove me */
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { PageTitle } from './PageTitle';
 import { TodoList } from './TodoList';
 import { TodoForm } from './TodoForm';
@@ -17,23 +17,29 @@ export function Todos() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
-  const [reloadToggle, setReloadToggle] = useState(false);
+  const getTodos = useCallback(async () => {
+    try {
+      const response = await fetch('/api/todos');
+      if (response.ok !== true) setError(true);
+      return response;
+    } catch {
+      setError(true);
+    }
+  }, []);
 
   /* Implement useEffect to fetch all todos. Hints are at the bottom of the file. */
+
   useEffect(() => {
-    async function getTodos() {
+    async () => {
       try {
-        const response = await fetch('/api/todos');
-        if (response.ok !== true) setError(true);
-        setTodos(await response.json());
+        setTodos(getTodos() as unknown as Todo[]);
       } catch {
         setError(true);
       } finally {
         setIsLoading(false);
       }
-    }
-    getTodos();
-  }, [reloadToggle]);
+    };
+  }, [getTodos]);
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo) {
@@ -55,19 +61,13 @@ export function Todos() {
       setTodos(newTodos);
     } catch {
       setError(true);
-    } finally {
-      setIsLoading(false);
-      setReloadToggle(!reloadToggle);
     }
   }
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
   async function toggleCompleted(todo: Todo) {
     try {
-      const body = {
-        task: todo.task,
-        isCompleted: !todo.isCompleted,
-      };
+      const body = { ...todos, isCompleted: !todo.isCompleted };
       const response = await fetch(`/api/todos/${todo.todoId}`, {
         method: 'PUT',
         headers: {
@@ -83,9 +83,6 @@ export function Todos() {
       setTodos(newTodos);
     } catch {
       setError(true);
-    } finally {
-      setIsLoading(false);
-      setReloadToggle(!reloadToggle);
     }
   }
 

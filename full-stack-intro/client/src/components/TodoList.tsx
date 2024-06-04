@@ -6,6 +6,7 @@ type Props = {
   toggleCompleted: (todo: Todo) => void;
 };
 export function TodoList({ todos, toggleCompleted }: Props) {
+  console.log(todos);
   return (
     <ul className="border rounded border-gray-300">
       {todos.map((todo) => (
