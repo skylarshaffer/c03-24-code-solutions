@@ -48,7 +48,7 @@ export function Todos() {
         throw new Error('fetch error');
       }
       if (response.ok !== true) setError(true);
-      const responseJson = response.json() as unknown as Todo;
+      const responseJson = (await response.json()) as unknown as Todo;
       const newTodos = [...todos, responseJson];
       setTodos(newTodos);
     } catch (err) {
@@ -70,7 +70,7 @@ export function Todos() {
       if (response.ok !== true) {
         throw new Error('fetch error');
       }
-      const responseJson = response.json() as unknown as Todo;
+      const responseJson = (await response.json()) as unknown as Todo;
       const newTodos = todos.map((oldTodo) =>
         oldTodo.todoId === todo.todoId ? responseJson : oldTodo
       );
