@@ -15,16 +15,11 @@ export function UserDetails({ userId, onCancel }: Props) {
   useEffect(() => {
     async function getUser() {
       try {
-        setUser(
-          await (
-            await fetch(
-              `https://jsonplaceholder.typicode.com/users/${userId}`,
-              {
-                method: 'GET',
-              }
-            )
-          ).json()
+        const response = await fetch(
+          `https://jsonplaceholder.typicode.com/users/${userId}`
         );
+        if (response.ok !== true) setError(true);
+        setUser(await response.json());
       } catch {
         setError(true);
       } finally {

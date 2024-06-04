@@ -21,13 +21,11 @@ export function Users() {
   useEffect(() => {
     async function getUsers() {
       try {
-        setUsers(
-          await (
-            await fetch('https://jsonplaceholder.typicode.com/users', {
-              method: 'GET',
-            })
-          ).json()
+        const response = await fetch(
+          `https://jsonplaceholder.typicode.com/users`
         );
+        if (response.ok !== true) setError(true);
+        setUsers(await response.json());
       } catch {
         setError(true);
       } finally {
