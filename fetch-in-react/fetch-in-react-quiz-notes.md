@@ -4,13 +4,15 @@
 
 Answer the following questions in the provided markdown file before turning in this exercise
 
-- What browser function can be used to make HTTP requests to a server in React?
+- What JavaScript function in the browser can be used in React to make HTTP requests to a server?
 
-  > `onClick()`
+  > `fetch()`
 
 - What two things need to be done to properly handle HTTP request errors? Why?
 
-  > `try/catch`
+  > - `try/catch`
+  >
+  > - Check the response.ok
 
 - How can `useEffect` be used to load data for a component?
 
