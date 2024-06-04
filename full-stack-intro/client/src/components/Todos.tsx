@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars -- Remove me */
 /* eslint-disable @typescript-eslint/no-empty-function -- Remove me */
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PageTitle } from './PageTitle';
 import { TodoList } from './TodoList';
 import { TodoForm } from './TodoForm';
@@ -17,29 +17,26 @@ export function Todos() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
-  const getTodos = useCallback(async () => {
-    try {
-      const response = await fetch('/api/todos');
-      if (response.ok !== true) setError(true);
-      return response;
-    } catch {
-      setError(true);
-    }
-  }, []);
 
   /* Implement useEffect to fetch all todos. Hints are at the bottom of the file. */
-
   useEffect(() => {
-    async () => {
+    async function getTodos() {
       try {
-        setTodos(getTodos() as unknown as Todo[]);
+        const response = await fetch('/api/todos');
+        if (response.ok !== true) {
+          setError(error);
+          throw new Error();
+        }
+        setTodos(await response.json());
       } catch {
-        setError(true);
+        setError(error);
+        throw new Error();
       } finally {
         setIsLoading(false);
       }
-    };
-  }, [getTodos]);
+    }
+    getTodos();
+  }, [error, isLoading]);
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo) {
@@ -55,19 +52,28 @@ export function Todos() {
         },
         body: JSON.stringify(body),
       });
-      if (response.ok !== true) setError(true);
+      if (response.ok !== true) {
+        setError(error);
+        throw new Error();
+      }
       const responseJson = response.json() as unknown as Todo;
       const newTodos = [...todos, responseJson];
       setTodos(newTodos);
     } catch {
-      setError(true);
+      setError(error);
+      throw new Error();
+    } finally {
+      setIsLoading(false);
     }
   }
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
   async function toggleCompleted(todo: Todo) {
     try {
-      const body = { ...todos, isCompleted: !todo.isCompleted };
+      const body = {
+        ...todos,
+        isCompleted: !todo.isCompleted,
+      };
       const response = await fetch(`/api/todos/${todo.todoId}`, {
         method: 'PUT',
         headers: {
@@ -75,14 +81,20 @@ export function Todos() {
         },
         body: JSON.stringify(body),
       });
-      if (response.ok !== true) setError(true);
+      if (response.ok !== true) {
+        setError(error);
+        throw new Error();
+      }
       const responseJson = response.json() as unknown as Todo;
       const newTodos = todos.map((oldTodo) =>
         oldTodo.todoId === todo.todoId ? responseJson : oldTodo
       );
       setTodos(newTodos);
     } catch {
-      setError(true);
+      setError(error);
+      throw new Error();
+    } finally {
+      setIsLoading(false);
     }
   }
 
