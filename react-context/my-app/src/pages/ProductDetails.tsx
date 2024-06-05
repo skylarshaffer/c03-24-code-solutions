@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { readProduct, type Product, toDollars } from '../lib';
-import { CartContext } from '../components/CartContext';
+import { useCart } from '../components/useCart';
 
 export function ProductDetails() {
   const { productId } = useParams();
@@ -9,6 +9,7 @@ export function ProductDetails() {
   const [product, setProduct] = useState<Product>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
+  const addToCart = useCart().addToCart;
 
   useEffect(() => {
     async function loadProduct(productId: number) {
@@ -26,8 +27,6 @@ export function ProductDetails() {
       loadProduct(+productId);
     }
   }, [productId]);
-
-  const { addToCart } = useContext(CartContext);
 
   function handleAddToCart() {
     if (!product) throw new Error('Should never happen');
