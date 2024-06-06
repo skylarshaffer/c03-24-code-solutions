@@ -5,6 +5,7 @@ import argon2 from 'argon2';
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import { ClientError, errorMiddleware, authMiddleware } from './lib/index.js';
+import { verify } from 'crypto';
 
 type User = {
   userId: number;
@@ -35,12 +36,13 @@ app.post('/api/auth/sign-up', async (req, res, next) => {
     if (!username || !password) {
       throw new ClientError(400, 'username and password are required fields');
     }
-    const hashedPassword = argon2.hash(password);
+    const hashedPassword = await argon2.hash(password);
     const sql = `
       insert into "users" ("username", "hashedPassword")
         values ($1, $2)
         returning "userId","username","createdAt"
     `;
+    console.log(username, password, hashedPassword);
     const params = [username, hashedPassword];
     const result = await db.query(sql, params);
     res.status(201).json(result.rows);
@@ -77,7 +79,7 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
      */
     const params = [username];
     const result = await db.query(sql, params);
-    const resultUser = result.rows as unknown as User;
+    const resultUser = result.rows[0] as unknown as User;
     if (!resultUser) {
       throw new ClientError(401, `invalid login`);
     } else {
